@@ -13,6 +13,7 @@
 ## Descrição
 
 ### Link do projeto no GitHub: https://github.com/Rodrigo-07/Jogo-do-Grupo-5
+### Link para jogar o jogo: https://rodrigo-07.github.io/Jogo-do-Grupo-5/
 
 📜 Descrição curta sobre o que seu projeto faz.
 <br><br>
