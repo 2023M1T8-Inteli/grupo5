@@ -12,6 +12,8 @@
 
 ## Descrição
 
+### Link do projeto no GitHub: https://github.com/Rodrigo-07/Jogo-do-Grupo-5
+
 📜 Descrição curta sobre o que seu projeto faz.
 <br><br>
 Meu projeto é um exemplo de como utilizar o github.
