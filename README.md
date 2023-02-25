@@ -8,7 +8,7 @@
 
 ## Nome do Grupo
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: <a href="">Clara Mohammad</a>, <a href="">Daniel Zular</a>, <a href="">Erik Batista</a>, <a href="">Gabrielly Silva Vitor</a>, <a href="">Otto Bernardo</a>, <a href="">Pedro Cruz</a>, <a href="">Rodrigo Sales</a>, <a href="">Samuel Martins</a>
 
 ## Descrição
 
