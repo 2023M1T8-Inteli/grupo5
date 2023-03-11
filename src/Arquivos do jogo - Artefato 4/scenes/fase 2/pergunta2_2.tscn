@@ -1,0 +1,100 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/fase 2/pergunta2_2.gd" type="Script" id=1]
+[ext_resource path="res://sprites/fundo.png" type="Texture" id=2]
+[ext_resource path="res://Fonte/connection_ii/ConnectionII.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://scenes/fase 2/text.tres" type="DynamicFont" id=4]
+
+[sub_resource type="DynamicFont" id=2]
+size = 105
+font_data = ExtResource( 3 )
+
+[node name="pergunta2" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 30.0, 339.0 ]
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 181.5, 328.75 )
+scale = Vector2( 1.19436, 1.1725 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 48.0
+margin_top = 96.0
+margin_right = 339.0
+margin_bottom = 156.0
+rect_scale = Vector2( 0.973517, 1.13219 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "O que e corrupcao ?"
+align = 3
+valign = 3
+autowrap = true
+
+[node name="Botões" type="Node" parent="."]
+
+[node name="RESPOSTA" type="Button" parent="Botões"]
+margin_left = 31.0
+margin_top = 284.0
+margin_right = 1958.0
+margin_bottom = 543.0
+rect_scale = Vector2( 0.15935, 0.26032 )
+custom_fonts/font = SubResource( 2 )
+icon_align = 1
+
+[node name="Label" type="Label" parent="Botões/RESPOSTA"]
+margin_left = 69.0306
+margin_top = 72.9873
+margin_right = 778.031
+margin_bottom = 105.987
+rect_scale = Vector2( 2.5518, 3.69519 )
+custom_fonts/font = ExtResource( 4 )
+text = "E o ato de subornar"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="RESPOSTA2" type="Button" parent="Botões"]
+margin_left = 30.0
+margin_top = 386.0
+margin_right = 1184.0
+margin_bottom = 549.0
+rect_scale = Vector2( 0.267, 0.38 )
+custom_fonts/font = SubResource( 2 )
+icon_align = 1
+
+[node name="Label" type="Label" parent="Botões/RESPOSTA2"]
+margin_left = 26.2172
+margin_top = 26.3157
+margin_right = 817.217
+margin_bottom = 85.3157
+rect_scale = Vector2( 1.40901, 1.96654 )
+custom_fonts/font = ExtResource( 4 )
+text = "Falta de ética que resulta somente em uma reputação ruim para a corporação"
+autowrap = true
+
+[node name="RESPOSTA3" type="Button" parent="Botões"]
+margin_left = 30.0
+margin_top = 482.0
+margin_right = 1191.0
+margin_bottom = 619.0
+rect_scale = Vector2( 0.267, 0.38 )
+custom_fonts/font = SubResource( 2 )
+icon_align = 1
+
+[node name="Label" type="Label" parent="Botões/RESPOSTA3"]
+margin_left = 19.0
+margin_top = 13.0
+margin_right = 962.0
+margin_bottom = 54.0
+rect_scale = Vector2( 1.23081, 2.83512 )
+custom_fonts/font = ExtResource( 4 )
+text = "Pratica de atos ilícitos com a finalidade de obter ganhos pessoais"
+autowrap = true
+
+[connection signal="pressed" from="Botões/RESPOSTA3" to="." method="_on_RESPOSTA3_pressed"]
