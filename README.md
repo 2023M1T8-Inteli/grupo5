@@ -8,7 +8,7 @@
 
 ## Nome do Grupo
 
-## Integrantes: <a href="">Clara Mohammad</a>, <a href="">Daniel Zular</a>, <a href="">Erik Batista</a>, <a href="">Gabrielly Silva Vitor</a>, <a href="">Otto Bernardo</a>, <a href="">Pedro Cruz</a>, <a href="">Rodrigo Sales</a>, <a href="">Samuel Martins</a>
+## Integrantes: <a href="">Clara Mohammad</a>, <a href="">Daniel Zular</a>, <a href="">Erik Batista</a>, <a href="">Gabrielly Silva Vitor</a>, <a href="">Otto Bernardo</a>, <a href="">Pedro Cruz</a>, <a href="https://www.linkedin.com/in/rodrigo-sales-07/">Rodrigo Sales</a>, <a href="">Samuel Martins</a>
 
 ## Descrição
 
