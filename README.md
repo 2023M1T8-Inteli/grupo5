@@ -4,16 +4,16 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do Projeto
+# Nome do Projeto: V.Ethics
 
 ## Nome do Grupo
 
-## Integrantes: <a href="">Clara Mohammad</a>, <a href="">Daniel Zular</a>, <a href="">Erik Batista</a>, <a href="">Gabrielly Silva Vitor</a>, <a href="">Otto Bernardo</a>, <a href="">Pedro Cruz</a>, <a href="">Rodrigo Sales</a>, <a href="">Samuel Martins</a>
+## Integrantes: <a href="">Clara Mohammad</a>, <a href="https://www.linkedin.com/in/danielzular/">Daniel Zular</a>, <a href="https://www.linkedin.com/in/erik-batista-da-silva-455612215/">Erik Batista</a>, <a href="https://www.linkedin.com/in/gabriellysilvavitor/">Gabrielly Silva Vitor</a>, <a href="https://www.linkedin.com/in/otto-bernardo-coutinho-lima/">Otto Bernardo</a>, <a href="https://www.linkedin.com/in/pedro-henrique-cruz-178a62227/">Pedro Cruz</a>, <a href="https://www.linkedin.com/in/rodrigo-sales-07/">Rodrigo Sales</a>, <a href="https://www.linkedin.com/in/samuel-martins-lopes-nascimento-7a805526a/">Samuel Martins</a>
 
 ## Descrição
 
 ### Link do projeto no GitHub: https://github.com/Rodrigo-07/Jogo-do-Grupo-5
-### Link para jogar o jogo: https://rodrigo-07.github.io/Jogo-do-Grupo-5/
+### Link para jogar o jogo: https://2023m1t8-inteli.github.io/grupo5/
 
 📜 Descrição curta sobre o que seu projeto faz.
 <br><br>
@@ -25,12 +25,12 @@ Meu projeto é um exemplo de como utilizar o github.
 </p>
 
 
-💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
-<br><br>
-Meu projeto ajuda estudantes inteli a configurarem seus githubs.
-<br><br>
-May the force be with you!
-<br><br>
+<br>
+O jogo foi desenvolvido a pedido da empresa de telecomunicações V.tal, com o intuito de gamificar o código de ética, buscando especialmente aumentar o percentual de completude dos treinamento, aderência ao nosso código de ética e políticas obrigatórias. Buscamos criar um jogo que pudesse ser jogado facilmente em qualquer lugar e transmitisse o conteúdo do código de ética de maneira mais didática e interativa. Nosso jogo é baseado em 3 pilares : diálogos, perguntas e minigames sendo que cada um desses elementos faz parte na construção da narrativa e na transmissão do conteúdo sobre o código de ética. 
+
+A narrativa é construída em torno do fato que você é um funcionário da V.tal que vai aprender sobre o código de ética vivendo diversas situações. O jogo é dividido em 3 fases, onde cada uma aborda um tema diferente sendo assédio, corrupção e ambiente de trabalho seguro e saudável. Além disso, foi implementado um sistema de salvamento e código de verificação da pontuação e nível de completude do jogo.
+<br>
+
 
 ## 🛠 Estrutura de pastas
 
@@ -92,20 +92,94 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 ## 🗃 Histórico de lançamentos
 
-A cada atualização os detalhes devem ser lançados aqui.
+* 0.1.0: 07/02/2023
+  * Criação da cena de acesso aos minigames
+  * Cena de menu
+* 0.1.1: 08/02/2023
+  * Mudança de resolução
+  * Prototpo do minigame da fase 1
+* 1.0: 09/02/2023 (Primeira sprint)
+  * Implementação de uma cena de perguntas no jogo
+  * Design inicial da cena de escolha de fases
+  * Mecânica básica da fase 1
+  * Bug de exportação para HTML arrumado
+  * Elaboração do menu inicial
+  * Elaboração dos primeiros rascunhos do design do personagem e fases
+  * Export github pages
+* 1.1: 14/02/2023
+  * Implementação dos carros na fase 1
+  * Design inicial do menu e botões do jogo
+* 1.2: 15/02/2023
+  * Novos carros na fase 1
+  * Botão de retorno da cena de seleção de fases
+  * Ajuste nos caminhos das cenas
+  * Colisão dos carros com o player na fase 1
+* 1.3: 16/02/2023
+  * Bug de sair fora da tela 1 resolvido
+  * Arrumação das pastas do projeto
+  * Comentários nas partes do código que estava faltando
+* 1.4: 20/02/2023
+  * Mecânica dos carro aparecem aleatoriamente e movimentação
+  * Mais um carro na fase 1
+  * Animação do personagem na fase 1
+  * Implementação do sistema básico de diálogo
+* 1.5: 23/02/2023
+  * Implementação inicial do minigame dos fios
+  * Implementação dos diálogos iniciais
+* 2.0: 24/02/2023 (Final da sprint 2)
+  * Padronização dos nomes das variáveis
+  * Diálogos da fase 1
+  * Ajustes na dificuldade da fase 1
+  * Elaboração do fluxograma de todas as fases
+  * Design do personagem na fase 1 e dos NPCs
+  * Implementação do minigame dos fios na fase 1
+  * Export git pages
+* 2.1: 27/02/2023
+  * Adaptar o jogo para mobile
+  * Exportação para android
+* 2.2: 01/03/2023
+  * Novo design para a cena de seleção de fases
+  * Bugs na fase dos fios arrumados
+  * Implementação do minigame estilo pacman
+* 2.3: 02/03/2023
+  * Implementação do mini game no estilo the world hardest game
+  * Adição dos inimigos na fase do pacman
+  * Design das cenas dos diálogos
+* 2.4: 06/03/2023
+  * Implantação do controle do volume
+  * Implementação da aleatoriedade do movimento dos inimigos na fase do pacman
+  * Implementação inicial do sistema de pontos
+  * Sistema de erro na fase dos fios
+* 2.5: 08/09/2023 
+  * Implementação das perguntas nas fases que faltavam
+  * Movimentação adaptada para o celular no minigame do pacman
+  * Bug dos pontos infinitos arrumado
+* 3.0: 09/03/2023 (Final da sprint 3)
+  * Comentários em partes do código que estavam sem
+  * HTML export
+  * Export git pages
+  * Novo design do menu inicial
+  * Novo design das cenas dos diálogos
+  * Protótipo da tela de tutorial das fases
+* 3.1: 14/03/2023
+  * Implementação do ganho de pontos nas fases que faltavam
+  * Sistema de QR code quantidade de pontos feito pelo colaborador
+* 3.2: 17/03/2023
+  * Sistema inicial de pausa nas fases
+  * Sistema de salvamento baseado no código gerado
+* 3.3: 20/03/2023
+  * Ajustes no tamanhos das fontes, novo design das cenas das perguntas e design nos botões
+  * Efeito de transição entre as cenas
+  * Fluxo das fases arrumados
+* 3.4: 21/03/2023
+  * Ajustes no sistema de pause das fases
+  * Mudanças de fontes nas perguntas
+  * Fluxos das fases arrumado
+* 3.5: 22/03/2023
+  * Implementação do sistema de verificação
+  * Testes do menus e cenas de feedbacks utilizando popups
+  * Ajustes nos designs das cenas de diálogos
 
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
 
 ## 📋 Licença/License
 
