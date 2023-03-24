@@ -190,16 +190,16 @@ Para abrir este projeto você necessita das seguintes ferramentas:
   * Novo ícone para os botões das fases
   * Ajustes nas telas de tutoriais
  * 4.0: 24/03/2023
-  * Sistema de verificação de pontos
-  * Feedbacks dos lugares errados no whg
-  * Feedbacks das respostas certas e erradas no gdd
-  * Revisão nos textos dos diálogos e melhorias
-  * Tutorias das fases
-  * Opção de pause durante as fases
-  * Novo design da nos minigames
-  * Melhorias no sistema de save manual
-  * Mudanças de fontes
-  * Gitpages export
+    * Sistema de verificação de pontos
+    * Feedbacks dos lugares errados no whg
+    * Feedbacks das respostas certas e erradas no gdd
+    * Revisão nos textos dos diálogos e melhorias
+    * Tutorias das fases
+    * Opção de pause durante as fases
+    * Novo design da nos minigames
+    * Melhorias no sistema de save manual
+    * Mudanças de fontes
+    * Gitpages export
 
 
 ## 📋 Licença/License
