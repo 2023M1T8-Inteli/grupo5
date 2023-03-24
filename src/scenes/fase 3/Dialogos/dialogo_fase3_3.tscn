@@ -1,0 +1,171 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://scenes/fase 3/Dialogos/dialogo_fase3_3.gd" type="Script" id=1]
+[ext_resource path="res://sprites/personagem.png" type="Texture" id=2]
+[ext_resource path="res://sprites/balão (2).png" type="Texture" id=3]
+[ext_resource path="res://sprites/trutinha_vtal_2.png" type="Texture" id=4]
+[ext_resource path="res://sprites/personagem_sprite_2.png" type="Texture" id=5]
+[ext_resource path="res://sprites/gray_empty_button.png" type="Texture" id=6]
+[ext_resource path="res://sprites/invisivel.png" type="Texture" id=7]
+[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Fonte/upheaval/upheavtt.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://sprites/trutinha_vtal_1.png" type="Texture" id=10]
+
+[sub_resource type="StreamTexture" id=5]
+flags = 4
+load_path = "res://.import/cenario das falas.png-e4c200de76ccb19432c3156ed6dae896.stex"
+
+[sub_resource type="Animation" id=6]
+resource_name = "alex_falando"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 2 ), ExtResource( 5 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "trutinha_vtal_falando"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ ExtResource( 10 ), ExtResource( 4 ) ]
+}
+
+[sub_resource type="DynamicFont" id=7]
+size = 60
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 18
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 19
+font_data = ExtResource( 8 )
+
+[node name="Control" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_horizontal_guides_": [ 372.0, 131.0 ],
+"_edit_vertical_guides_": [ 151.0 ]
+}
+
+[node name="touch" type="TouchScreenButton" parent="."]
+position = Vector2( -83, -113 )
+scale = Vector2( 0.453333, 0.895833 )
+normal = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 179.5, 321.5 )
+scale = Vector2( 1.32963, 1.33958 )
+z_index = -3
+texture = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 224.0
+margin_top = 164.0
+margin_right = 224.0
+margin_bottom = 164.0
+script = ExtResource( 1 )
+dialogPath = "res://scenes/fase 3/Dialogos/dialogo_fase3_3.json"
+
+[node name="Alex" type="Sprite" parent="ColorRect"]
+position = Vector2( 62, 393 )
+scale = Vector2( 1.33693, 1.24986 )
+texture = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect/Alex"]
+anims/alex_falando = SubResource( 6 )
+
+[node name="PersonagemVtal" type="Sprite" parent="ColorRect"]
+position = Vector2( -144, 321 )
+scale = Vector2( 0.195182, 0.236553 )
+texture = ExtResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect/PersonagemVtal"]
+anims/trutinha_vtal_falando = SubResource( 1 )
+
+[node name="balaodefalaVtal" type="Sprite" parent="ColorRect"]
+position = Vector2( -62.291, 27.1222 )
+rotation = 3.14159
+scale = Vector2( 1.35629, -1.21231 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="balaodefalaAlex" type="Sprite" parent="ColorRect"]
+position = Vector2( -29.32, 25.6401 )
+rotation = 0.0008383
+scale = Vector2( 1.33899, 1.17627 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="ColorRect"]
+margin_left = -69.0
+margin_top = 284.0
+margin_right = 343.0
+margin_bottom = 690.0
+rect_scale = Vector2( 0.535027, 0.662074 )
+icon = ExtResource( 6 )
+flat = true
+
+[node name="Label" type="Label" parent="ColorRect/Button"]
+margin_left = 83.0316
+margin_top = 179.409
+margin_right = 341.032
+margin_bottom = 233.409
+custom_colors/font_color = Color( 1, 0.85098, 0.247059, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Começar"
+
+[node name="Name" type="RichTextLabel" parent="ColorRect"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = -166.0
+margin_top = -73.0
+margin_right = 72.0
+margin_bottom = -36.0
+custom_fonts/normal_font = SubResource( 3 )
+
+[node name="Text" type="RichTextLabel" parent="ColorRect"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = -168.0
+margin_top = -42.0
+margin_right = 77.0
+margin_bottom = 136.0
+custom_fonts/normal_font = SubResource( 4 )
+scroll_following = true
+
+[node name="Timer" type="Timer" parent="ColorRect"]
+
+[connection signal="pressed" from="touch" to="ColorRect" method="_on_touch_pressed"]
+[connection signal="released" from="touch" to="ColorRect" method="_on_touch_released"]
+[connection signal="pressed" from="ColorRect/Button" to="ColorRect" method="_on_Button_pressed"]

@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/scripts/obs.gd" type="Script" id=2]
+[ext_resource path="res://scenes/scripts/obs3.gd" type="Script" id=3]
+[ext_resource path="res://scenes/scripts/obs2.gd" type="Script" id=4]
+[ext_resource path="res://sprites/inimigos whg.png" type="Texture" id=5]
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 8.0
+
+[node name="Obstaculo" type="Node2D"]
+
+[node name="obs" type="KinematicBody2D" parent="."]
+position = Vector2( 262, 248 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obs"]
+position = Vector2( 1, -1 )
+shape = SubResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="obs"]
+position = Vector2( 0.625003, -0.625003 )
+scale = Vector2( 0.0592448, 0.0592448 )
+texture = ExtResource( 5 )
+
+[node name="obs2" type="KinematicBody2D" parent="."]
+position = Vector2( 114, 334 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obs2"]
+position = Vector2( 1, -1 )
+shape = SubResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="obs2"]
+position = Vector2( 0.625003, -0.625003 )
+scale = Vector2( 0.0592448, 0.0592448 )
+texture = ExtResource( 5 )
+
+[node name="obs3" type="KinematicBody2D" parent="."]
+position = Vector2( 94, 135 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obs3"]
+position = Vector2( 1, -1 )
+shape = SubResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="obs3"]
+position = Vector2( 0.625003, -0.625003 )
+scale = Vector2( 0.0592448, 0.0592448 )
+texture = ExtResource( 5 )

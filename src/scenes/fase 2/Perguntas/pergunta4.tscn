@@ -1,0 +1,176 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://scenes/fase 2/Perguntas/pergunta4.gd" type="Script" id=1]
+[ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://sprites/Tela perguntas.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Button.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Buttonmuitoescuro.png" type="Texture" id=5]
+[ext_resource path="res://sprites/Buttonescuro.png" type="Texture" id=6]
+[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://scenes/fase 2/Perguntas/FeedbackErro4.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/fase 2/Perguntas/FeedbackAcerto4.tscn" type="PackedScene" id=9]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Tela perguntas.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, -1, 364, 643 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Tela perguntas.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 721, 1, 360, 47 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Tela perguntas.png 2"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 1083, 54, 357, 147 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=4]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 18
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="pergunta2" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 30.0, 339.0, 43.0, 328.0 ]
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 5, 5 )
+format = 1
+tile_data = PoolIntArray( -65536, 0, 0, 0, 1, 0, 720897, 2, 0 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 5.0
+margin_top = 224.0
+margin_right = 355.0
+margin_bottom = 349.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="TextureButton"]
+margin_left = 19.0
+margin_top = 17.0
+margin_right = 328.0
+margin_bottom = 114.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Como R$100 não faz nenhuma diferença para a empresa, você pode aceitar a proposta do cliente e mantê-la em sigilo."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_left = 5.0
+margin_top = 360.0
+margin_right = 355.0
+margin_bottom = 485.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="TextureButton2"]
+margin_left = 15.0
+margin_top = 29.0
+margin_right = 335.0
+margin_bottom = 95.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Ao presenciar essa situação, você deve negar a proposta dizendo que ela está em desacordo com as regras da empresa"
+align = 1
+autowrap = true
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+margin_left = 5.0
+margin_top = 496.0
+margin_right = 355.0
+margin_bottom = 621.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="TextureButton3"]
+margin_left = 41.0
+margin_top = 15.0
+margin_right = 317.0
+margin_bottom = 112.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Você deve negar a proposta e mantê-la em sigilo, protegendo a privacidade do cliente."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = 212.0
+margin_right = 360.0
+margin_bottom = 213.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Points" type="Label" parent="."]
+margin_left = 248.0
+margin_top = 17.0
+margin_right = 299.0
+margin_bottom = 33.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 33.0
+margin_top = 48.0
+margin_right = 333.0
+margin_bottom = 200.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Você está prestando um serviço em uma residência e o cliente lhe oferece R$100 para você fazer um “gatonet”. Nessa situação, qual deve ser sua atitude?"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="FeedbackErro4" parent="." instance=ExtResource( 8 )]
+
+[node name="FeedbackAcerto4" parent="." instance=ExtResource( 9 )]
+
+[connection signal="button_up" from="TextureButton" to="." method="_on_TextureButton_button_up"]
+[connection signal="button_up" from="TextureButton2" to="." method="_on_TextureButton2_button_up"]
+[connection signal="button_up" from="TextureButton3" to="." method="_on_TextureButton3_button_up"]

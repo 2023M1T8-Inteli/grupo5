@@ -1,0 +1,90 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://sprites/tenta novamente.png" type="Texture" id=3]
+[ext_resource path="res://sprites/papel.png" type="Texture" id=4]
+[ext_resource path="res://scenes/fase 1/Peguntas/FeedbackAcerto2.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 150
+font_data = ExtResource( 1 )
+
+[node name="FeedbackAcerto2" type="Node2D"]
+
+[node name="Popup" type="Popup" parent="."]
+visible = true
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="Popup"]
+margin_top = 226.0
+margin_right = 360.0
+margin_bottom = 616.0
+color = Color( 0.666667, 0.686275, 0.952941, 1 )
+
+[node name="Papel" type="Sprite" parent="Popup"]
+position = Vector2( 180, 425 )
+scale = Vector2( 0.179, 0.179 )
+texture = ExtResource( 4 )
+
+[node name="Title" type="Label" parent="Popup"]
+margin_left = 45.0
+margin_top = 264.0
+margin_right = 315.0
+margin_bottom = 297.0
+custom_colors/font_color = Color( 0.192157, 0.266667, 0.556863, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Parabens, você acertou"
+align = 1
+valign = 1
+
+[node name="Title2" type="Label" parent="Popup"]
+margin_left = 45.0
+margin_top = 320.0
+margin_right = 315.0
+margin_bottom = 353.0
+custom_colors/font_color = Color( 0.192157, 0.266667, 0.556863, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Ganhou 2 V Coins"
+align = 1
+valign = 1
+
+[node name="Text" type="Label" parent="Popup"]
+margin_left = 39.0
+margin_top = 339.0
+margin_right = 320.0
+margin_bottom = 561.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Apesar de metas inatingíveis configurarem-se como assédio moral, as cobranças saudáveis em busca de um desempenho eficiente e alguns picos de maior volume de trabalho são normais dentro do ambiente profissional."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Proxima" type="TextureButton" parent="Popup"]
+margin_left = 80.0
+margin_top = 549.0
+margin_right = 1745.0
+margin_bottom = 909.0
+rect_scale = Vector2( 0.12, 0.12 )
+texture_normal = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Popup/Proxima"]
+margin_left = 513.333
+margin_top = 70.0
+margin_right = 1147.33
+margin_bottom = 270.0
+custom_fonts/font = SubResource( 3 )
+text = "Continuar"
+
+[connection signal="pressed" from="Popup/Proxima" to="Popup" method="_on_Proxima_pressed"]
