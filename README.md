@@ -200,6 +200,7 @@ Para abrir este projeto você necessita das seguintes ferramentas:
     * Melhorias no sistema de save manual
     * Mudanças de fontes
     * Gitpages export
+    * Bug nos fluxos das fases resolvido
 
 
 ## 📋 Licença/License
