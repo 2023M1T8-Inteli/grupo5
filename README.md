@@ -176,9 +176,31 @@ Para abrir este projeto você necessita das seguintes ferramentas:
   * Mudanças de fontes nas perguntas
   * Fluxos das fases arrumado
 * 3.5: 22/03/2023
-  * Implementação do sistema de verificação
+  * Implementação do sistema de verificação dos saves
   * Testes do menus e cenas de feedbacks utilizando popups
   * Ajustes nos designs das cenas de diálogos
+  * Fase 1 com feedbacks
+* 3.6: 23/03/2023
+  * Implmentação dos feedbacks das perguntas na fase 2 e 3
+  * Bug de sair fora da tela do crossyroad resolvido
+  * Implementação do novo design do mingame whg na fase 1
+  * Novo design nas fases do fios 
+  * Implementação dos tutoriais dos minigames
+  * Novo desgin do pacman
+  * Novo ícone para os botões das fases
+  * Ajustes nas telas de tutoriais
+ * 4.0: 24/03/2023
+    * Sistema de verificação de pontos
+    * Feedbacks dos lugares errados no whg
+    * Feedbacks das respostas certas e erradas no gdd
+    * Revisão nos textos dos diálogos e melhorias
+    * Tutorias das fases
+    * Opção de pause durante as fases
+    * Novo design da nos minigames
+    * Melhorias no sistema de save manual
+    * Mudanças de fontes
+    * Gitpages export
+    * Bug nos fluxos das fases resolvido
 
 
 ## 📋 Licença/License
