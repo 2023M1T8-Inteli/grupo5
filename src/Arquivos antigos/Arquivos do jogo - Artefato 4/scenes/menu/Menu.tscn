@@ -1,0 +1,83 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://sprites/teclastartpress.png" type="Texture" id=1]
+[ext_resource path="res://sprites/teclaajustespress.png" type="Texture" id=2]
+[ext_resource path="res://audios/videoplayback.mp3" type="AudioStream" id=3]
+[ext_resource path="res://sprites/teclastart.png" type="Texture" id=4]
+[ext_resource path="res://sprites/titulo.png" type="Texture" id=5]
+[ext_resource path="res://sprites/teclaajustes.png" type="Texture" id=6]
+[ext_resource path="res://scripts/menu/Menu.gd" type="Script" id=7]
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/wallpapermenuprincipal.png-cf1bb529f40f2ba3e27315a97c5be9e9.stex"
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 160, 149 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 160, 0, 160, 149 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 320, 0, 160, 149 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 480, 0, 160, 149 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.01
+} ]
+
+[node name="Menu" type="Node2D"]
+scale = Vector2( 5.62219, 2.07408 )
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 32.016, 154.283 )
+scale = Vector2( -0.284586, 0.771424 )
+texture = SubResource( 2 )
+
+[node name="Botões" type="Node" parent="."]
+
+[node name="Composição menu" type="Node" parent="."]
+
+[node name="Sprite" type="AnimatedSprite" parent="Composição menu"]
+position = Vector2( 184, 144 )
+scale = Vector2( 2.15375, 2.07166 )
+frames = SubResource( 7 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 14.2293
+margin_top = 131.142
+margin_right = 386.229
+margin_bottom = 285.142
+rect_scale = Vector2( 0.0997728, 0.270982 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 1 )
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+margin_left = 14.2293
+margin_top = 188.999
+margin_right = 386.229
+margin_bottom = 342.999
+rect_scale = Vector2( 0.0997728, 0.270982 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 2 )
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_TextureButton3_pressed"]

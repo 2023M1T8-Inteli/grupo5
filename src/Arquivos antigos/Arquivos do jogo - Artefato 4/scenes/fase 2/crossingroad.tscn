@@ -1,0 +1,196 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://sprites/map.png" type="Texture" id=1]
+[ext_resource path="res://sprites/Road.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Road 2.png" type="Texture" id=3]
+[ext_resource path="res://sprites/sprite do personagem.png" type="Texture" id=4]
+[ext_resource path="res://sprites/casinha do balacobaco.png" type="Texture" id=5]
+[ext_resource path="res://scripts/fase 2/crossingroad_scene.gd" type="Script" id=6]
+[ext_resource path="res://scripts/fase 2/personagem.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 61.875, 41.375 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 11, 21.75 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "andar para direita"
+length = 0.65
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Personagem/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 12, 13, 14, 15 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "andar para esquerda"
+length = 0.65
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Personagem/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 8, 9, 10, 11 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "andar para frente"
+length = 0.65
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Personagem/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "andar para trás"
+length = 0.65
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Personagem/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[node name="crossingroad" type="Node2D"]
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 292.0 ],
+"_edit_vertical_guides_": [ 334.0, -155.0 ]
+}
+
+[node name="mapa" type="Node" parent="."]
+
+[node name="ruas" type="Node" parent="mapa"]
+
+[node name="grama" type="Sprite" parent="mapa/ruas"]
+position = Vector2( 178.907, 318.207 )
+rotation = -1.56578
+scale = Vector2( 0.415781, 0.497589 )
+z_as_relative = false
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="rua" type="Sprite" parent="mapa/ruas"]
+position = Vector2( 88.5, 492.75 )
+scale = Vector2( 0.368852, 0.3875 )
+z_as_relative = false
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="rua2" type="Sprite" parent="mapa/ruas"]
+position = Vector2( 304.5, 492.75 )
+scale = Vector2( 0.368852, 0.3875 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="mapa/ruas"]
+position = Vector2( 86.5001, 307.5 )
+scale = Vector2( 0.418089, 0.34252 )
+z_as_relative = false
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="mapa/ruas"]
+position = Vector2( 326.5, 307.5 )
+scale = Vector2( 0.418089, 0.34252 )
+z_as_relative = false
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite3" type="Sprite" parent="mapa/ruas"]
+position = Vector2( 74.5, 179.5 )
+scale = Vector2( 0.418089, 0.34252 )
+z_as_relative = false
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4" type="Sprite" parent="mapa/ruas"]
+position = Vector2( 314.5, 179.5 )
+scale = Vector2( 0.418089, 0.34252 )
+z_as_relative = false
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="casa" type="Area2D" parent="mapa"]
+position = Vector2( -3, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="casa" type="Sprite" parent="mapa/casa"]
+position = Vector2( 99.6666, 77.6666 )
+scale = Vector2( 0.445834, 0.470833 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mapa/casa"]
+position = Vector2( 99, 77 )
+shape = SubResource( 2 )
+
+[node name="Personagem" type="KinematicBody2D" parent="mapa"]
+position = Vector2( 180, 610 )
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="mapa/Personagem"]
+position = Vector2( 0, 2 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="mapa/Personagem"]
+position = Vector2( 2, -2 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+hframes = 4
+vframes = 4
+frame = 13
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="mapa/Personagem"]
+"anims/andar para direita" = SubResource( 3 )
+"anims/andar para esquerda" = SubResource( 4 )
+"anims/andar para frente" = SubResource( 5 )
+"anims/andar para trás" = SubResource( 6 )
+
+[connection signal="body_entered" from="mapa/casa" to="mapa/Personagem" method="_on_casa_body_entered"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/popup teste.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Popup" type="Popup" parent="."]
+visible = true
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="Popup"]
+margin_left = 60.0
+margin_top = 203.0
+margin_right = 329.0
+margin_bottom = 447.0
+
+[node name="Button" type="Button" parent="Popup"]
+margin_left = 254.0
+margin_top = 212.0
+margin_right = 325.0
+margin_bottom = 233.0
+text = "X"
+
+[connection signal="pressed" from="Popup/Button" to="Popup" method="_on_Button_pressed"]

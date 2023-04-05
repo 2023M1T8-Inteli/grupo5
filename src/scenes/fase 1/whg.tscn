@@ -1,0 +1,509 @@
+[gd_scene load_steps=50 format=2]
+
+[ext_resource path="res://sprites/whgggg.png" type="Texture" id=1]
+[ext_resource path="res://scenes/scripts/Node2D.gd" type="Script" id=2]
+[ext_resource path="res://scenes/scripts/KinematicBody2D.gd" type="Script" id=3]
+[ext_resource path="res://sprites/direita.png" type="Texture" id=4]
+[ext_resource path="res://sprites/baixo.png" type="Texture" id=5]
+[ext_resource path="res://sprites/esquerda.png" type="Texture" id=6]
+[ext_resource path="res://sprites/cima.png" type="Texture" id=7]
+[ext_resource path="res://scenes/fase 3/minigame/Sprite.gd" type="Script" id=8]
+[ext_resource path="res://sprites/button play.png" type="Texture" id=9]
+[ext_resource path="res://sprites/pausar .png" type="Texture" id=10]
+[ext_resource path="res://sprites/button casinha .png" type="Texture" id=11]
+[ext_resource path="res://sprites/invisivel.png" type="Texture" id=12]
+[ext_resource path="res://sprites/paccccc.png" type="Texture" id=13]
+[ext_resource path="res://sprites/pasta_whg.png" type="Texture" id=14]
+[ext_resource path="res://sprites/camera_whg.png" type="Texture" id=15]
+[ext_resource path="res://sprites/celular_whg.png" type="Texture" id=16]
+[ext_resource path="res://scenes/fase 1/tutorial_whg.tscn" type="PackedScene" id=17]
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 11, 10.5 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 12.5, 11.5 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 0, 0, 1800, -3200, -1800, -3200 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PoolVector2Array( 0, 0, -1800, 3200, 1800, 3200 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PoolVector2Array( 0, 0, 1800, 3200, 1800, -3200 )
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+points = PoolVector2Array( 0, 0, -1800, 3200, -1800, -3200 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+points = PoolVector2Array( 0, 0, 0, 640, 17, 13, 359, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=22]
+points = PoolVector2Array( 359, 13, 27, 12, 356, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=23]
+points = PoolVector2Array( 0, 9, 14, 9, 14, 640, 0, 640 )
+
+[sub_resource type="ConvexPolygonShape2D" id=24]
+points = PoolVector2Array( 360.8, 640, 346.944, 640, 346.944, 12.9167, 360.8, 12.9167 )
+
+[sub_resource type="ConvexPolygonShape2D" id=25]
+points = PoolVector2Array( 357.2, 640, 14, 640, 14, 626, 357.2, 626 )
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
+points = PoolVector2Array( 200.069, 158.981, 190.231, 158.981, 190.231, 13.7269, 200.069, 13.7269 )
+
+[sub_resource type="ConvexPolygonShape2D" id=27]
+points = PoolVector2Array( 0, 150.301, 97.0602, 150.301, 97.0602, 157.824, 0, 157.824 )
+
+[sub_resource type="ConvexPolygonShape2D" id=28]
+points = PoolVector2Array( 191.968, 157.824, 160.718, 157.824, 160.718, 148.565, 191.968, 148.565 )
+
+[sub_resource type="ConvexPolygonShape2D" id=29]
+points = PoolVector2Array( 271.829, 172.292, 261.991, 172.292, 261.991, 124.259, 271.829, 124.259 )
+
+[sub_resource type="ConvexPolygonShape2D" id=30]
+points = PoolVector2Array( 348.796, 133.518, 268.356, 133.518, 268.356, 124.259, 348.796, 124.259 )
+
+[sub_resource type="ConvexPolygonShape2D" id=31]
+points = PoolVector2Array( 190.81, 255.046, 201.806, 255.046, 201.806, 366.157, 190.81, 366.157 )
+
+[sub_resource type="ConvexPolygonShape2D" id=32]
+points = PoolVector2Array( 0, 254.468, 190.81, 254.468, 190.81, 265.463, 0, 265.463 )
+
+[sub_resource type="ConvexPolygonShape2D" id=33]
+points = PoolVector2Array( 271.829, 397.407, 261.412, 397.407, 261.412, 250.417, 271.829, 250.417 )
+
+[sub_resource type="ConvexPolygonShape2D" id=34]
+points = PoolVector2Array( 352.847, 397.407, 271.829, 397.407, 271.829, 387.569, 352.847, 387.569 )
+
+[sub_resource type="ConvexPolygonShape2D" id=35]
+points = PoolVector2Array( 201.227, 463.958, 190.81, 463.958, 190.81, 438.495, 201.227, 438.495 )
+
+[sub_resource type="ConvexPolygonShape2D" id=36]
+points = PoolVector2Array( 201.227, 465.116, 13.1481, 465.116, 13.1481, 454.699, 201.227, 454.699 )
+
+[sub_resource type="ConvexPolygonShape2D" id=37]
+points = PoolVector2Array( 351.111, 547.292, 326.227, 547.292, 326.227, 536.296, 351.111, 536.296 )
+
+[sub_resource type="ConvexPolygonShape2D" id=38]
+points = PoolVector2Array( 238.843, 546.991, 96.4814, 546.991, 96.4814, 537.153, 238.843, 537.153 )
+
+[sub_resource type="ConvexPolygonShape2D" id=39]
+points = PoolVector2Array( 105.741, 636.69, 95.324, 636.69, 95.324, 537.153, 105.741, 537.153 )
+
+[sub_resource type="TileSet" id=20]
+0/name = "whgggg.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 384, 640 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 21 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 21 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 22 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 23 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 24 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 25 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 26 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 27 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 28 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 29 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 30 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 31 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 32 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 33 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 34 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 35 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 36 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 37 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 38 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 39 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=40]
+extents = Vector2( 76, 32 )
+
+[sub_resource type="RectangleShape2D" id=41]
+extents = Vector2( 73.75, 50.75 )
+
+[sub_resource type="RectangleShape2D" id=42]
+extents = Vector2( 13.5, 51 )
+
+[sub_resource type="RectangleShape2D" id=43]
+extents = Vector2( 35, 52.5 )
+
+[sub_resource type="Theme" id=44]
+
+[sub_resource type="StyleBoxFlat" id=45]
+bg_color = Color( 0.0117647, 0.0196078, 0.207843, 1 )
+border_width_left = 9
+border_width_top = 9
+border_width_right = 9
+border_width_bottom = 9
+border_color = Color( 0.968627, 1, 0, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+shadow_size = 7
+shadow_offset = Vector2( 3, 3 )
+
+[node name="WHG" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_right = 360.0
+margin_bottom = 640.0
+color = Color( 0.807843, 0.807843, 0.807843, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Node" type="Node" parent="ColorRect"]
+
+[node name="Node" type="Node" parent="ColorRect/Node"]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+collision_layer = 3
+collision_mask = 11
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 55, 570 )
+scale = Vector2( 0.133017, 0.144504 )
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 56, 570.5 )
+shape = SubResource( 9 )
+
+[node name="key" type="Node" parent="."]
+
+[node name="key" type="StaticBody2D" parent="key"]
+position = Vector2( 239, 488 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="key/key"]
+position = Vector2( 12, 14 )
+shape = SubResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="key/key"]
+position = Vector2( 11.5, 12.5 )
+scale = Vector2( 0.203125, 0.223958 )
+texture = ExtResource( 15 )
+
+[node name="key2" type="StaticBody2D" parent="key"]
+position = Vector2( 239, 487 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="key/key2"]
+position = Vector2( 83, -73 )
+shape = SubResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="key/key2"]
+position = Vector2( 83, -72 )
+scale = Vector2( 0.153646, 0.160156 )
+texture = ExtResource( 16 )
+
+[node name="key3" type="StaticBody2D" parent="key"]
+position = Vector2( 239, 487 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="key/key3"]
+position = Vector2( -11, -346 )
+shape = SubResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="key/key3"]
+position = Vector2( -10.5, -346.25 )
+scale = Vector2( 0.161458, 0.195313 )
+texture = ExtResource( 14 )
+
+[node name="Controles" type="Node" parent="."]
+
+[node name="Cima" type="TouchScreenButton" parent="Controles"]
+position = Vector2( 180, 320 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 7 )
+shape = SubResource( 16 )
+
+[node name="Baixo" type="TouchScreenButton" parent="Controles"]
+position = Vector2( 180, 320 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 5 )
+shape = SubResource( 17 )
+
+[node name="Direita" type="TouchScreenButton" parent="Controles"]
+position = Vector2( 180, 320 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 4 )
+shape = SubResource( 18 )
+
+[node name="Esquerda" type="TouchScreenButton" parent="Controles"]
+position = Vector2( 180, 320 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 6 )
+shape = SubResource( 19 )
+
+[node name="TileMap" type="TileMap" parent="."]
+z_index = -1
+tile_set = SubResource( 20 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0 )
+
+[node name="Compliance" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Compliance"]
+position = Vector2( 101, 99 )
+shape = SubResource( 40 )
+
+[node name="Pausar2" type="Button" parent="."]
+margin_left = 307.0
+margin_top = 13.0
+margin_right = 7275.0
+margin_bottom = 6931.0
+rect_scale = Vector2( 0.00596626, 0.00596626 )
+text = "pausar"
+icon = ExtResource( 10 )
+
+[node name="FundoPause" type="Sprite" parent="."]
+pause_mode = 2
+visible = false
+z_index = 3
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="FundoPause"]
+margin_left = -1.0
+margin_top = -3.0
+margin_right = 387.0
+margin_bottom = 659.0
+color = Color( 0.611765, 0.67451, 0.705882, 1 )
+
+[node name="Button3" type="Button" parent="FundoPause"]
+margin_left = 219.0
+margin_top = 98.0
+margin_right = 7143.0
+margin_bottom = 7016.0
+rect_scale = Vector2( 0.0126425, 0.0126425 )
+icon = ExtResource( 11 )
+
+[node name="Button2" type="Button" parent="FundoPause"]
+margin_left = 78.0
+margin_top = 100.0
+margin_right = 7040.0
+margin_bottom = 7018.0
+rect_scale = Vector2( 0.0124347, 0.0124347 )
+text = "voltar"
+icon = ExtResource( 9 )
+
+[node name="HSlider" type="HSlider" parent="FundoPause"]
+margin_left = 77.0
+margin_top = 241.0
+margin_right = 317.0
+margin_bottom = 270.0
+
+[node name="Label" type="Label" parent="FundoPause"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 136.0
+margin_top = 295.0
+margin_right = 222.0
+margin_bottom = 309.0
+
+[node name="Label2" type="Label" parent="FundoPause"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 118.0
+margin_top = 354.0
+margin_right = 252.0
+margin_bottom = 378.0
+
+[node name="RH" type="Area2D" parent="."]
+position = Vector2( 60, 333 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RH"]
+position = Vector2( 29.25, 37.25 )
+shape = SubResource( 41 )
+
+[node name="Agua" type="Area2D" parent="."]
+position = Vector2( 295, 79 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agua"]
+position = Vector2( -9.5, -10 )
+shape = SubResource( 42 )
+
+[node name="Planta" type="Area2D" parent="."]
+position = Vector2( 310, 327 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta"]
+position = Vector2( 1, 2 )
+shape = SubResource( 43 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+pause_mode = 2
+position = Vector2( -20, -17 )
+scale = Vector2( 0.361667, 0.579167 )
+normal = ExtResource( 12 )
+
+[node name="Camera" type="Sprite" parent="."]
+modulate = Color( 0.278431, 0.278431, 0.278431, 1 )
+position = Vector2( 200, 20 )
+scale = Vector2( 0.203125, 0.223958 )
+texture = ExtResource( 15 )
+
+[node name="Cell" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.145098, 0.145098, 1 )
+position = Vector2( 240, 20 )
+scale = Vector2( 0.153646, 0.160156 )
+texture = ExtResource( 16 )
+
+[node name="Pasta" type="Sprite" parent="."]
+modulate = Color( 0.188235, 0.188235, 0.188235, 1 )
+position = Vector2( 280, 20 )
+scale = Vector2( 0.161458, 0.195313 )
+texture = ExtResource( 14 )
+
+[node name="PopUp" type="Sprite" parent="."]
+pause_mode = 2
+visible = false
+z_index = 3
+
+[node name="Panel" type="Panel" parent="PopUp"]
+anchor_right = 0.952
+margin_left = 31.0
+margin_top = 227.0
+margin_right = 330.0
+margin_bottom = 394.0
+theme = SubResource( 44 )
+theme_type_variation = "s"
+custom_styles/panel = SubResource( 45 )
+
+[node name="Label" type="Label" parent="PopUp"]
+margin_left = 62.0
+margin_top = 263.0
+margin_right = 299.0
+margin_bottom = 363.0
+align = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource( 17 )]
+
+[connection signal="pressed" from="Controles/Cima" to="KinematicBody2D" method="_on_Cima_pressed"]
+[connection signal="released" from="Controles/Cima" to="KinematicBody2D" method="_on_Cima_released"]
+[connection signal="pressed" from="Controles/Baixo" to="KinematicBody2D" method="_on_Baixo_pressed"]
+[connection signal="released" from="Controles/Baixo" to="KinematicBody2D" method="_on_Baixo_released"]
+[connection signal="pressed" from="Controles/Direita" to="KinematicBody2D" method="_on_Direita_pressed"]
+[connection signal="released" from="Controles/Direita" to="KinematicBody2D" method="_on_Direita_released"]
+[connection signal="pressed" from="Controles/Esquerda" to="KinematicBody2D" method="_on_Esquerda_pressed"]
+[connection signal="released" from="Controles/Esquerda" to="KinematicBody2D" method="_on_Esquerda_released"]
+[connection signal="body_shape_entered" from="Compliance" to="KinematicBody2D" method="_on_Compliance_body_shape_entered"]
+[connection signal="pressed" from="Pausar2" to="." method="_on_Pausar2_pressed"]
+[connection signal="pressed" from="FundoPause/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="FundoPause/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="value_changed" from="FundoPause/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="body_shape_entered" from="RH" to="KinematicBody2D" method="_on_RH_body_shape_entered"]
+[connection signal="body_shape_entered" from="Agua" to="KinematicBody2D" method="_on_Agua_body_shape_entered"]
+[connection signal="body_shape_entered" from="Planta" to="KinematicBody2D" method="_on_Planta_body_shape_entered"]
+[connection signal="pressed" from="TouchScreenButton" to="KinematicBody2D" method="_on_TouchScreenButton_pressed"]

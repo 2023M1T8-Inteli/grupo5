@@ -176,10 +176,70 @@ Para abrir este projeto você necessita das seguintes ferramentas:
   * Mudanças de fontes nas perguntas
   * Fluxos das fases arrumado
 * 3.5: 22/03/2023
-  * Implementação do sistema de verificação
+  * Implementação do sistema de verificação dos saves
   * Testes do menus e cenas de feedbacks utilizando popups
   * Ajustes nos designs das cenas de diálogos
-
+  * Fase 1 com feedbacks
+* 3.6: 23/03/2023
+  * Implmentação dos feedbacks das perguntas na fase 2 e 3
+  * Bug de sair fora da tela do crossyroad resolvido
+  * Implementação do novo design do mingame whg na fase 1
+  * Novo design nas fases do fios 
+  * Implementação dos tutoriais dos minigames
+  * Novo desgin do pacman
+  * Novo ícone para os botões das fases
+  * Ajustes nas telas de tutoriais
+ * 4.0: 24/03/2023
+    * Sistema de verificação de pontos
+    * Feedbacks dos lugares errados no whg
+    * Feedbacks das respostas certas e erradas no gdd
+    * Revisão nos textos dos diálogos e melhorias
+    * Tutorias das fases
+    * Opção de pause durante as fases
+    * Novo design da nos minigames
+    * Melhorias no sistema de save manual
+    * Mudanças de fontes
+    * Gitpages export
+    * Bug nos fluxos das fases resolvido
+ * 4.1: 28/03/2023
+    * Troca do textura da NPC da fase de diálogos
+    * Comentários no código
+    * Implementação de uma cena final quando o jogador finaliza o jogo
+    * Implementação de uma cena com os links do outros jogos feitos para a V.tal
+    * Ajustes na HUD das cenas do diálogos 
+  * 4.2: 29/03/2023
+    * Mudança dos controles na fase do the World Hardest Game (Controle que segue o toque do jogador)
+    * Implementação da movimentação por slide na fase do pacman
+    * Feedback de vitória na fase do World Hardest Game
+    * Ajustes na tela final do jogo
+  * 4.3: 30/03/2023
+    * Ajustes na funcionalidade de verificar o código de salvamento no jogo e completude das fases
+    * Implementação de abrir o teclado na versão mobile
+    * Implementação da movimentação por swipe na fase do crossyroad
+    * Ajustes no design do tutorial da fase do world hardest game
+    * Ajuste na dificuldade da fase do world hardest game
+    * Implementação da mecânica de arrastar os fios até os terminais na fase dos fios
+  * 4.4: 03/04/2023
+    * Implementação da mecânica de aparecer o nome dos lugares na fase do world hardest game quando o jogador chega perto
+    * Ajustes na HUD e mecânica do pacman
+    * Ajustes nos tamanhos dos botões
+    * Correção dos controles da fase do crossyroad
+    * Mudança no background do menu 
+  * 4.5: 04/04/2023
+    * Músicas nas fases do jogo
+    * Bugs na fase do fios resolvidos
+    * Código do pacman comentado
+    * Mudanças no design nas cenas de prêmios
+    * Pequenos bugs na interface resolvidos
+    * Mudanças no nome da NPC Vtal
+    * Sounds de feedback de acerto e erro nas fases do fios
+    * Sons de feedback de acontecimentos nas fases
+    * Ajustes no design do slider de volume e cena de pause
+    * Ajustes na HUD da fase do world hardest game
+  * 4.6: 05/04/2023
+    * Comentários no código da fase dos fios
+    * Bug de não aparecer o diálogo final resolvido
+    * Tutoriais da fases atualizados e implementados no jogo
 
 ## 📋 Licença/License
 
