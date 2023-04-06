@@ -12,17 +12,18 @@
 
 ## Descrição
 
-### Link do projeto no GitHub: https://github.com/Rodrigo-07/Jogo-do-Grupo-5
 ### Link para jogar o jogo: https://2023m1t8-inteli.github.io/grupo5/
 
-📜 Descrição curta sobre o que seu projeto faz.
+
 <br><br>
-Meu projeto é um exemplo de como utilizar o github.
 <br><br>
 <p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
+<img src="imagens\Tela incial do jogo.png" alt="NOME DO JOGO" border="0">
 </p>
+<p align="center">
+Game by V.Ethics</a>
+</p>
+
 
 
 <br>
@@ -78,7 +79,7 @@ Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro progra
 <b>HTML:</b>
 
 Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
+Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser) ou teste o jogo através desse link: https://2023m1t8-inteli.github.io/grupo5/
 
 ## 💻 Configuração para Desenvolvimento
 
