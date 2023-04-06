@@ -1,0 +1,717 @@
+[gd_scene load_steps=67 format=2]
+
+[ext_resource path="res://scenes/fase 3/minigame/pacman.gd" type="Script" id=1]
+[ext_resource path="res://sprites/pacman.png" type="Texture" id=2]
+[ext_resource path="res://scenes/fase 3/minigame/KinematicBody2D.gd" type="Script" id=3]
+[ext_resource path="res://sprites/Untitled design.png" type="Texture" id=4]
+[ext_resource path="res://sprites/pac_man_level (1).png" type="Texture" id=5]
+[ext_resource path="res://sprites/balinhaVTal.png" type="Texture" id=6]
+[ext_resource path="res://sprites/copo_agua2.png" type="Texture" id=7]
+[ext_resource path="res://scenes/fase 3/minigame/SwipeControl.gd" type="Script" id=8]
+[ext_resource path="res://scenes/fase 3/tutorial/tutorial_pacman.tscn" type="PackedScene" id=9]
+[ext_resource path="res://sprites/button ajuste audio (3).png" type="Texture" id=10]
+[ext_resource path="res://sprites/ajuste audio.png" type="Texture" id=11]
+[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://musics and sfx/item.wav" type="AudioStream" id=13]
+[ext_resource path="res://scenes/fase 3/minigame/spriteCerveja.gd" type="Script" id=14]
+[ext_resource path="res://sprites/cervejinha_picanha.png" type="Texture" id=15]
+[ext_resource path="res://musics and sfx/572936__bloodpixelhero__error (1).wav" type="AudioStream" id=16]
+[ext_resource path="res://sprites/hearts.png" type="Texture" id=17]
+[ext_resource path="res://musics and sfx/win.wav" type="AudioStream" id=18]
+[ext_resource path="res://scenes/fase 3/minigame/Sprite.gd" type="Script" id=19]
+[ext_resource path="res://sprites/pausar .png" type="Texture" id=20]
+[ext_resource path="res://sprites/button play.png" type="Texture" id=21]
+[ext_resource path="res://sprites/button casinha .png" type="Texture" id=22]
+[ext_resource path="res://musics and sfx/pacman.mp3" type="AudioStream" id=23]
+
+[sub_resource type="AtlasTexture" id=56]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 450, 800 )
+
+[sub_resource type="AtlasTexture" id=57]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 450, 800 )
+
+[sub_resource type="SpriteFrames" id=58]
+animations = [ {
+"frames": [ SubResource( 56 ), SubResource( 57 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=88]
+
+[sub_resource type="AtlasTexture" id=82]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=83]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 160, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=84]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 320, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=85]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 480, 0, 160, 160 )
+
+[sub_resource type="SpriteFrames" id=86]
+animations = [ {
+"frames": [ SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=87]
+extents = Vector2( 52.5001, 40 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 12.5, 12.5 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 8.5, 8.5 )
+
+[sub_resource type="Animation" id=51]
+resource_name = "Lifes1"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=52]
+resource_name = "Lifes2"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=53]
+resource_name = "Lifes3"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=54]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:vframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 3 ]
+}
+
+[sub_resource type="StyleBoxTexture" id=89]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 200, 175 )
+
+[sub_resource type="StyleBoxTexture" id=90]
+
+[sub_resource type="StyleBoxTexture" id=91]
+
+[sub_resource type="DynamicFont" id=92]
+size = 29
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 12 )
+
+[sub_resource type="RectangleShape2D" id=59]
+extents = Vector2( 8, 91.5 )
+
+[sub_resource type="RectangleShape2D" id=60]
+extents = Vector2( 107.75, 8 )
+
+[sub_resource type="RectangleShape2D" id=61]
+extents = Vector2( 7.5, 89.5 )
+
+[sub_resource type="RectangleShape2D" id=62]
+extents = Vector2( 129.75, 7.75 )
+
+[sub_resource type="RectangleShape2D" id=63]
+extents = Vector2( 10, 48.172 )
+
+[sub_resource type="RectangleShape2D" id=64]
+extents = Vector2( 55, 13.8441 )
+
+[sub_resource type="RectangleShape2D" id=65]
+extents = Vector2( 10, 100.134 )
+
+[sub_resource type="RectangleShape2D" id=66]
+extents = Vector2( 125.625, 13.7634 )
+
+[sub_resource type="RectangleShape2D" id=67]
+extents = Vector2( 91.25, 13.6022 )
+
+[sub_resource type="RectangleShape2D" id=68]
+extents = Vector2( 10, 65.7258 )
+
+[sub_resource type="RectangleShape2D" id=69]
+extents = Vector2( 10, 89.4624 )
+
+[sub_resource type="RectangleShape2D" id=70]
+extents = Vector2( 225, 7.74199 )
+
+[sub_resource type="RectangleShape2D" id=71]
+extents = Vector2( 4.99998, 551.398 )
+
+[sub_resource type="RectangleShape2D" id=72]
+extents = Vector2( 55, 13.7634 )
+
+[sub_resource type="RectangleShape2D" id=73]
+extents = Vector2( 10.625, 120 )
+
+[sub_resource type="RectangleShape2D" id=74]
+extents = Vector2( 10, 48.172 )
+
+[sub_resource type="RectangleShape2D" id=75]
+extents = Vector2( 30.625, 13.6828 )
+
+[sub_resource type="RectangleShape2D" id=76]
+extents = Vector2( 10, 52.4731 )
+
+[sub_resource type="RectangleShape2D" id=77]
+extents = Vector2( 80, 13.7635 )
+
+[sub_resource type="RectangleShape2D" id=78]
+extents = Vector2( 10, 49.0324 )
+
+[sub_resource type="RectangleShape2D" id=79]
+extents = Vector2( 40.4688, 13.5685 )
+
+[sub_resource type="RectangleShape2D" id=80]
+extents = Vector2( 30, 13.7635 )
+
+[sub_resource type="RectangleShape2D" id=81]
+extents = Vector2( 10, 51.183 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 180, 320 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 58 )
+
+[node name="controls" type="Node" parent="."]
+
+[node name="SwipeScreenButton" type="TouchScreenButton" parent="controls"]
+scale = Vector2( 19.2575, 31.6562 )
+shape = SubResource( 88 )
+script = ExtResource( 8 )
+
+[node name="Person" type="KinematicBody2D" parent="."]
+position = Vector2( 177, 308 )
+scale = Vector2( 0.2, 0.2 )
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Person"]
+position = Vector2( -7.50002, -22.4999 )
+scale = Vector2( 0.84375, 0.84375 )
+frames = SubResource( 86 )
+frame = 3
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Person"]
+position = Vector2( -7.5, -25 )
+scale = Vector2( 0.999999, 0.999999 )
+shape = SubResource( 87 )
+
+[node name="enemies" type="Node" parent="."]
+
+[node name="spriteCerveja" type="KinematicBody2D" parent="enemies" groups=["inimigos"]]
+position = Vector2( 196, 33 )
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/spriteCerveja"]
+position = Vector2( -6.5, -6.5 )
+shape = SubResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="enemies/spriteCerveja"]
+position = Vector2( -6.5, -6.5 )
+scale = Vector2( 0.100909, 0.100909 )
+z_index = 1
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="spriteCerveja2" type="KinematicBody2D" parent="enemies" groups=["inimigos"]]
+position = Vector2( 91, 152 )
+collision_layer = 2
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/spriteCerveja2"]
+position = Vector2( -6.5, -6.5 )
+shape = SubResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="enemies/spriteCerveja2"]
+position = Vector2( -6.5, -6.5 )
+scale = Vector2( 0.100581, 0.100581 )
+z_index = 1
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="spriteCerveja3" type="KinematicBody2D" parent="enemies" groups=["inimigos"]]
+position = Vector2( 219, 147 )
+collision_layer = 4
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/spriteCerveja3"]
+position = Vector2( -6.5, -6.5 )
+shape = SubResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="enemies/spriteCerveja3"]
+position = Vector2( -6.5, -6.5 )
+scale = Vector2( 0.100411, 0.104242 )
+z_index = 1
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="spriteCerveja4" type="KinematicBody2D" parent="enemies" groups=["inimigos"]]
+position = Vector2( 331, 441 )
+collision_layer = 16
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/spriteCerveja4"]
+position = Vector2( -6.5, -6.5 )
+shape = SubResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="enemies/spriteCerveja4"]
+position = Vector2( -6.5, -6.5 )
+scale = Vector2( 0.102714, 0.102714 )
+z_index = 1
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="good" type="Node" parent="."]
+
+[node name="Capacete" type="Area2D" parent="good"]
+position = Vector2( 329, 608 )
+scale = Vector2( 1.5, 1.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="good/Capacete"]
+position = Vector2( 1, -1 )
+shape = SubResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="good/Capacete"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 6 )
+
+[node name="Capacete2" type="Area2D" parent="good"]
+position = Vector2( 332, 79 )
+scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="good/Capacete2"]
+position = Vector2( 0.5, -0.5 )
+shape = SubResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="good/Capacete2"]
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 7 )
+
+[node name="Capacete3" type="Area2D" parent="good"]
+position = Vector2( 277, 278 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="good/Capacete3"]
+position = Vector2( 0.5, -0.5 )
+shape = SubResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="good/Capacete3"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 7 )
+
+[node name="Capacete4" type="Area2D" parent="good"]
+position = Vector2( 27, 433 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="good/Capacete4"]
+position = Vector2( 0.5, -0.5 )
+shape = SubResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="good/Capacete4"]
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 6 )
+
+[node name="Hearts" type="Sprite" parent="."]
+position = Vector2( 75, 35 )
+scale = Vector2( 0.17, 0.17 )
+texture = ExtResource( 17 )
+vframes = 3
+frame = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hearts"]
+anims/Lifes1 = SubResource( 51 )
+anims/Lifes2 = SubResource( 52 )
+anims/Lifes3 = SubResource( 53 )
+anims/RESET = SubResource( 54 )
+
+[node name="Pausar" type="Button" parent="."]
+margin_left = 313.0
+margin_top = 11.0
+margin_right = 7281.0
+margin_bottom = 6929.0
+rect_scale = Vector2( 0.005, 0.005 )
+text = "pausar"
+icon = ExtResource( 20 )
+expand_icon = true
+
+[node name="FundoPause" type="Sprite" parent="."]
+pause_mode = 2
+visible = false
+z_index = 2
+script = ExtResource( 19 )
+
+[node name="ColorRect" type="ColorRect" parent="FundoPause"]
+margin_left = -1.0
+margin_top = -3.0
+margin_right = 387.0
+margin_bottom = 659.0
+color = Color( 0.611765, 0.67451, 0.705882, 1 )
+
+[node name="Button3" type="Button" parent="FundoPause"]
+margin_left = 219.0
+margin_top = 98.0
+margin_right = 7143.0
+margin_bottom = 7016.0
+rect_scale = Vector2( 0.0126425, 0.0126425 )
+icon = ExtResource( 22 )
+expand_icon = true
+
+[node name="Button2" type="Button" parent="FundoPause"]
+margin_left = 78.0
+margin_top = 100.0
+margin_right = 7040.0
+margin_bottom = 7018.0
+rect_scale = Vector2( 0.0124347, 0.0124347 )
+text = "voltar"
+icon = ExtResource( 21 )
+expand_icon = true
+
+[node name="HSlider" type="HSlider" parent="FundoPause"]
+margin_left = 80.0
+margin_top = 206.0
+margin_right = 322.0
+margin_bottom = 381.0
+rect_scale = Vector2( 1.07574, 0.945809 )
+rect_pivot_offset = Vector2( 158.484, 173 )
+input_pass_on_modal_close_click = false
+custom_icons/grabber_highlight = ExtResource( 10 )
+custom_icons/grabber = ExtResource( 10 )
+custom_styles/slider = SubResource( 89 )
+custom_styles/grabber_area_highlight = SubResource( 90 )
+custom_styles/grabber_area = SubResource( 91 )
+min_value = -30.0
+max_value = 0.0
+
+[node name="Label" type="Label" parent="FundoPause"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 151.0
+margin_top = 314.0
+margin_right = 237.0
+margin_bottom = 328.0
+
+[node name="Label2" type="Label" parent="FundoPause"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 77.0
+margin_top = 360.0
+margin_right = 323.0
+margin_bottom = 397.0
+
+[node name="Label3" type="Label" parent="FundoPause"]
+margin_left = 150.0
+margin_top = 235.0
+margin_right = 251.0
+margin_bottom = 282.0
+rect_pivot_offset = Vector2( 56, 14 )
+custom_fonts/font = SubResource( 92 )
+text = "Volume"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 198, 413 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2, 126.5 )
+shape = SubResource( 59 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 140, 280 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 15.75, 108 )
+shape = SubResource( 60 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2( 255, 340 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( 0.5, 129.5 )
+shape = SubResource( 61 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2( 159, 40 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2( 24.25, 15.75 )
+shape = SubResource( 62 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="StaticBody2D4"]
+position = Vector2( 25, 79 )
+scale = Vector2( 0.8, 0.58125 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( 0, 22.3656 )
+shape = SubResource( 63 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( -115, 91.2635 )
+shape = SubResource( 64 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( -160, -22.0161 )
+shape = SubResource( 65 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( -44.375, 187.527 )
+shape = SubResource( 66 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( -8.75, 366.29 )
+shape = SubResource( 67 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( 70, 39.9193 )
+shape = SubResource( 68 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( -160, 290.753 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( -3.75, 890.323 )
+scale = Vector2( 0.999999, 0.999999 )
+shape = SubResource( 70 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( -5.00003, -199.57 )
+scale = Vector2( 0.999999, 0.999999 )
+shape = SubResource( 70 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( -225, 344.946 )
+scale = Vector2( 0.999999, 0.999999 )
+shape = SubResource( 71 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( 215, 349.247 )
+scale = Vector2( 0.999999, 0.999999 )
+shape = SubResource( 71 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( -45, 579.785 )
+shape = SubResource( 72 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( 150.625, 94.1936 )
+shape = SubResource( 73 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( -1.52588e-05, 56.7742 )
+shape = SubResource( 74 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( 110.625, -12.1236 )
+shape = SubResource( 75 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( -75, -43.871 )
+shape = SubResource( 76 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( -70, 772.473 )
+shape = SubResource( 77 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( -160, 748.387 )
+shape = SubResource( 78 )
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( 70, 328.602 )
+shape = SubResource( 78 )
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( -160, 500.645 )
+shape = SubResource( 78 )
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( -160, 593.548 )
+shape = SubResource( 78 )
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( 70, 231.398 )
+shape = SubResource( 78 )
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( 119.531, 772.278 )
+shape = SubResource( 79 )
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( 180, 579.785 )
+shape = SubResource( 80 )
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( -192.5, 1.72043 )
+shape = SubResource( 80 )
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( 180, 366.452 )
+shape = SubResource( 80 )
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
+position = Vector2( 150, 328.172 )
+scale = Vector2( 0.999999, 0.999999 )
+shape = SubResource( 81 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource( 9 )]
+pause_mode = 2
+
+[node name="Popup" type="Popup" parent="."]
+visible = true
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Sprite2" type="Sprite" parent="Popup"]
+position = Vector2( 179, 303 )
+scale = Vector2( 0.175, 0.175 )
+z_index = 1
+texture = ExtResource( 11 )
+region_enabled = true
+region_rect = Rect2( 76.6414, 1981.45, 1989.26, 311.571 )
+
+[node name="Sprite" type="Sprite" parent="Popup"]
+position = Vector2( 179, 241 )
+scale = Vector2( 0.175, 0.175 )
+z_index = 1
+texture = ExtResource( 11 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 2145.79, 595.256 )
+
+[node name="Label" type="Label" parent="Popup/Sprite"]
+margin_left = -742.856
+margin_top = -68.5713
+margin_right = 797.144
+margin_bottom = 348.429
+custom_colors/font_color = Color( 0.145098, 0.145098, 0.145098, 1 )
+text = "PARABÊNS!!"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+autoplay = true
+
+[node name="Collect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -5.453
+
+[node name="Error" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+
+[node name="Win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+
+[connection signal="body_shape_entered" from="good/Capacete" to="Person" method="_on_Capacete_body_shape_entered"]
+[connection signal="body_shape_entered" from="good/Capacete2" to="Person" method="_on_Capacete2_body_shape_entered"]
+[connection signal="body_shape_entered" from="good/Capacete3" to="Person" method="_on_Capacete3_body_shape_entered"]
+[connection signal="body_shape_entered" from="good/Capacete4" to="Person" method="_on_Capacete4_body_shape_entered"]
+[connection signal="pressed" from="Pausar" to="." method="_on_Pausar_pressed"]
+[connection signal="pressed" from="FundoPause/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="FundoPause/Button2" to="." method="_on_Button2_pressed"]

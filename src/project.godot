@@ -1,0 +1,74 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "TouchScreenButton",
+"class": "SwipeScreenButton",
+"language": "GDScript",
+"path": "res://scenes/fase 3/minigame/SwipeControl.gd"
+} ]
+_global_script_class_icons={
+"SwipeScreenButton": ""
+}
+
+[application]
+
+config/name="Jogo-do- Grupo- 5"
+run/main_scene="res://scenes/menu/Menu.tscn"
+config/icon="res://icon.png"
+
+[audio]
+
+enable_audio_input=true
+
+[autoload]
+
+Points="*res://Node.gd"
+SwipeControl="*res://scenes/fase 3/minigame/SwipeControl.gd"
+
+[display]
+
+window/size/width=360
+window/size/height=640
+window/handheld/orientation="portrait"
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[global]
+
+unique=false
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[input]
+
+click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+touch={
+"deadzone": 0.5,
+"events": [  ]
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
