@@ -12,7 +12,6 @@
 
 ## Descrição
 
-### Link do projeto no GitHub: https://github.com/Rodrigo-07/Jogo-do-Grupo-5
 ### Link para jogar o jogo: https://2023m1t8-inteli.github.io/grupo5/
 
 📜 Descrição curta sobre o que seu projeto faz.
