@@ -14,9 +14,8 @@
 
 ### Link para jogar o jogo: https://2023m1t8-inteli.github.io/grupo5/
 
-📜 Descrição curta sobre o que seu projeto faz.
+
 <br><br>
-Meu projeto é um exemplo de como utilizar o github.
 <br><br>
 <p align="center">
 <img src="imagens\Tela incial do jogo.png" alt="NOME DO JOGO" border="0">
