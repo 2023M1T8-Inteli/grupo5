@@ -85,7 +85,7 @@ func nextPhrase() -> void:
 		
 		$Alex.visible = 1
 		$balaodefalaAlex.visible = 1
-	elif $Name.bbcode_text == "Funcionário da Vtal":
+	elif $Name.bbcode_text == "Funcionária da Vtal":
 		$Alex.visible = 0
 		$balaodefalaAlex.visible = 0
 		

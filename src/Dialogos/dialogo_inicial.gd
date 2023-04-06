@@ -12,7 +12,7 @@ var botao = false
 
 func _ready():
 	# Inciar a animação de fala dos personagens
-	$PersonagemVtal/AnimationPlayer.play("trutinha_vtal_falando")
+	$PersonagemVtal/AnimationPlayer.play("boneca_falando")
 	# Determina velocidaede que o texto aparece na tela
 	$Timer.wait_time = textSpeed
 	dialog = getDialog()
@@ -74,7 +74,7 @@ func nextPhrase() -> void:
 	# Determinar o nome e texto em si que irá ser mostrado na tela
 	$Name.bbcode_text = dialog[phraseNum]["Name"]
 	$Text.bbcode_text = dialog[phraseNum]["Text"]
-	
+#	$Text.bbcode_text = "[color=#4ab3ff]"+dialog[phraseNum]["Text"]+"[/color]"
 	$Text.visible_characters = 0
 	
 	while $Text.visible_characters < len($Text.text):

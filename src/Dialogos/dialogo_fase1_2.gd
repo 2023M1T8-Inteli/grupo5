@@ -12,7 +12,7 @@ var botao = false
 
 func _ready():
 	# Inciar a animação de fala dos personagens
-	$PersonagemVtal/AnimationPlayer.play("trutinha_vtal_falando")
+	$PersonagemVtal/AnimationPlayer.play("boneca_falando")
 	$Alex/AnimationPlayer.play("alex_falando")
 	# Determina velocidaede que o texto aparece na tela
 	$Timer.wait_time = textSpeed
@@ -27,6 +27,7 @@ func _ready():
 var touch
 func _on_touch_pressed():
 	touch = true
+
 func _process(delta):
 	# Se for precisonado enter o texto avança e vai para a próxima frase
 	if Input.is_action_just_pressed("ui_accept") or touch:
@@ -44,7 +45,7 @@ func _process(delta):
 func getDialog() -> Array:
 	# Verifica se o arquivo do diálogo existe
 	var f = File.new()
-	# se a condição for falso retorna essa mensagem
+	# Se não encontrar retorna essa mensagem
 	assert(f.file_exists(dialogPath), "File path does not exist")
 	
 	# Abre o arquivo
@@ -83,13 +84,14 @@ func nextPhrase() -> void:
 		
 		$Alex.visible = 1
 		$balaodefalaAlex.visible = 1
-	elif $Name.bbcode_text == "Funcionário da Vtal":
+	elif $Name.bbcode_text == "Funcionária da Vtal":
 		$Alex.visible = 0
 		$balaodefalaAlex.visible = 0
 		
 		$PersonagemVtal.visible = 1
 		$balaodefalaVtal.visible = 1
 	
+	# Enquanto tiver texto o código vai mostrando mais um carácter
 	while $Text.visible_characters < len($Text.text):
 		$Text.visible_characters += 1
 		

@@ -1,31 +1,35 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Dialogos/dialogo_inicial.gd" type="Script" id=1]
-[ext_resource path="res://sprites/trutinha_vtal_1.png" type="Texture" id=2]
+[ext_resource path="res://Fonte/dialogo_inicial.gd" type="Script" id=1]
+[ext_resource path="res://sprites/spritesheet.png" type="Texture" id=2]
 [ext_resource path="res://sprites/invisivel.png" type="Texture" id=3]
 [ext_resource path="res://sprites/balão (2).png" type="Texture" id=4]
 [ext_resource path="res://sprites/cenario das falas.png" type="Texture" id=5]
-[ext_resource path="res://sprites/trutinha_vtal_2.png" type="Texture" id=6]
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Fonte/upheaval/upheavtt.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://sprites/gray_empty_button.png" type="Texture" id=9]
 
-[sub_resource type="Animation" id=1]
-resource_name = "trutinha_vtal_falando"
-length = 0.5
+[sub_resource type="Animation" id=6]
+resource_name = "boneca_falando"
+length = 0.4
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:texture")
+tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ ExtResource( 2 ), ExtResource( 6 ) ]
+"update": 1,
+"values": [ 0, 2 ]
 }
+
+[sub_resource type="Animation" id=1]
+resource_name = "trutinha_vtal_falando"
+length = 0.5
+loop = true
 
 [sub_resource type="DynamicFont" id=4]
 size = 60
@@ -33,12 +37,11 @@ outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=8]
 size = 18
-outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=7]
 size = 19
 font_data = ExtResource( 7 )
 
@@ -76,12 +79,14 @@ script = ExtResource( 1 )
 dialogPath = "res://Dialogos/dialogo_inicial.json"
 
 [node name="PersonagemVtal" type="Sprite" parent="ColorRect"]
-position = Vector2( -119.997, 320.625 )
-scale = Vector2( 0.202255, 0.234318 )
+position = Vector2( -138.5, 416.909 )
+scale = Vector2( 0.647135, 0.402276 )
 z_index = -2
 texture = ExtResource( 2 )
+hframes = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect/PersonagemVtal"]
+anims/boneca_falando = SubResource( 6 )
 anims/trutinha_vtal_falando = SubResource( 1 )
 
 [node name="Button" type="Button" parent="ColorRect"]
@@ -106,30 +111,32 @@ text = "Começar"
 [node name="Name" type="RichTextLabel" parent="ColorRect"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -169.0
-margin_top = -72.0
-margin_right = 77.0
-margin_bottom = -35.0
-custom_fonts/normal_font = SubResource( 2 )
-fit_content_height = true
+margin_left = -176.0
+margin_top = -90.0
+margin_right = 96.0
+margin_bottom = -53.0
+custom_fonts/normal_font = SubResource( 8 )
 
 [node name="Text" type="RichTextLabel" parent="ColorRect"]
-modulate = Color( 0, 0, 0, 1 )
-self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -181.0
-margin_top = -36.0
-margin_right = 99.0
-margin_bottom = 119.0
-custom_fonts/normal_font = SubResource( 5 )
+margin_left = -180.0
+margin_top = -58.0
+margin_right = 92.0
+margin_bottom = 101.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 7 )
+bbcode_enabled = true
 
 [node name="balaodefalaVtal" type="Sprite" parent="ColorRect"]
-position = Vector2( -55.9737, 19.6652 )
+position = Vector2( -58, 4.99999 )
 rotation = 3.14086
-scale = Vector2( 1.3991, -1.14386 )
+scale = Vector2( 1.41266, -1.19793 )
 z_index = -1
 texture = ExtResource( 4 )
 
 [node name="Timer" type="Timer" parent="ColorRect"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
 
 [connection signal="pressed" from="touch" to="ColorRect" method="_on_touch_pressed"]
 [connection signal="pressed" from="ColorRect/Button" to="ColorRect" method="_on_Button_pressed"]

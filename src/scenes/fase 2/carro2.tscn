@@ -3,7 +3,6 @@
 [ext_resource path="res://sprites/pixel_blue_car-removebg-preview.png" type="Texture" id=1]
 [ext_resource path="res://scenes/scripts/fase 2/carro2.gd" type="Script" id=2]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 36.5, 14.75 )
 

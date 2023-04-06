@@ -21,7 +21,6 @@ font_data = ExtResource( 4 )
 [node name="FeedbackErro4" type="Node2D"]
 
 [node name="Popup" type="Popup" parent="."]
-visible = true
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 5 )

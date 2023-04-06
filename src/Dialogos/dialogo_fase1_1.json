@@ -1,8 +1,8 @@
 [
-    {"Name":"Funcionário da Vtal", "Text":"Alex, essa é uma das etapas da nossa jornada sobre conduta ética. Você sabe o que é assédio moral e como afeta a vítima e a empresa?"},
-    {"Name":"Alex", "Text":"Não entendo muito sobre o tema, você poderia me explicar melhor?"},
-    {"Name":"Funcionário da Vtal", "Text":"É caracterizado pela prática repetitiva de conduta abusiva, a qual desqualifica por meio de palavras, gestos ou atitudes, a autoestima, a segurança ou a imagem do outro, além de ferir sua integridade."},
-    {"Name":"Alex", "Text":"E qual ação eu devo tomar ao presenciar alguma prática abusiva?"},
-    {"Name":"Funcionário da Vtal", "Text":"Você deve procurar o escritório de compliance e fazer uma denúncia."},
-    {"Name":"Funcionário da Vtal", "Text":"Agora que você sabe como funciona o assédio moral e como deve agir, vamos colocar o seu conhecimento em prática."}
+    {"Name":"Funcionária da Vtal", "Text":"[fill]Alex, essa é uma das [color=#01579B]etapas[/color] da nossa jornada sobre conduta ética. Você sabe o que é [color=#01579B]assédio moral[/color] e como afeta a vítima e a empresa?[/fill]"},
+    {"Name":"Alex", "Text":"[fill]Não entendo muito sobre o tema, você poderia me explicar melhor?[/fill]"},
+    {"Name":"Funcionária da Vtal", "Text":"[fill]É caracterizado pela prática repetitiva de conduta abusiva, a qual desqualifica por meio de palavras, gestos ou atitudes, a autoestima, a segurança ou a imagem do outro, além de ferir sua integridade.[/fill]"},
+    {"Name":"Alex", "Text":"[fill]E qual ação eu devo tomar ao presenciar alguma prática abusiva?[/fill]"},
+    {"Name":"Funcionária da Vtal", "Text":"[fill]Você deve procurar o [color=#01579B]escritório de compliance[/color] e fazer uma denúncia.[/fill]"},
+    {"Name":"Funcionária da Vtal", "Text":"[fill]Agora que você sabe como funciona o assédio moral e como deve agir, vamos colocar o seu conhecimento em prática.[/fill]"}
 ]

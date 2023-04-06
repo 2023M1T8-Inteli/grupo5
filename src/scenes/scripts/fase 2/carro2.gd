@@ -19,5 +19,4 @@ func _physics_process(delta):
 	
 	# Se houver uma colisão a cena reinicia
 	if collision:
-		print(collision.collider.name)
 		get_tree().change_scene("res://scenes/fase 2/crossingroad.tscn")

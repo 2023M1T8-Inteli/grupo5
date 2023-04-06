@@ -11,7 +11,6 @@ var audio = AudioServer.get_bus_index("Master")
 func _ready():
 	transition.material.set_shader_param("type", transition_type)
 	animation.playback_speed = duration
-	$AudioStreamPlayer2D.play(true)
 
 
 # Botão para voltar para o menu
@@ -26,3 +25,7 @@ func _on_HSlider_value_changed(value):
 		AudioServer.set_bus_mute(audio,true)
 	else:
 		AudioServer.set_bus_mute(audio,false)
+
+ # Mudar para cena link dos outros jogos
+func _on_TextureButton_pressed():
+	get_tree().change_scene("res://scenes/menu/linkdosoutrosjogos.tscn")

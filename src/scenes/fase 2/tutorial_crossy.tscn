@@ -14,6 +14,11 @@ position = Vector2( 180, 319.222 )
 scale = Vector2( 1.34074, 1.34074 )
 texture = ExtResource( 1 )
 
+[node name="Tutorial-crossingRoad" type="Sprite" parent="."]
+visible = false
+position = Vector2( 178, 320 )
+scale = Vector2( 1.33333, 1.33333 )
+
 [node name="continue" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 1.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://sprites/Button.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://scenes/fase 3/Perguntas/FeedbackErro3.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/fase 3/Perguntas/FeedbackAcerto3.tscn" type="PackedScene" id=9]
+[ext_resource path="res://musics and sfx/quests.tscn" type="PackedScene" id=10]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tela perguntas.png 0"
@@ -169,6 +170,8 @@ autowrap = true
 [node name="FeedbackErro3" parent="." instance=ExtResource( 8 )]
 
 [node name="FeedbackAcerto3" parent="." instance=ExtResource( 9 )]
+
+[node name="sounds" parent="." instance=ExtResource( 10 )]
 
 [connection signal="button_up" from="TextureButton" to="." method="_on_TextureButton_button_up"]
 [connection signal="button_up" from="TextureButton2" to="." method="_on_TextureButton2_button_up"]

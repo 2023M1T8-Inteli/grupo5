@@ -18,3 +18,4 @@ func set_is_paused(value):
 func _on_continue_pressed():
 	self.is_paused = false
 	
+	

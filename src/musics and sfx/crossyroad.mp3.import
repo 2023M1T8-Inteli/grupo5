@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/crossyroad.mp3-ede5ef2aab31115ce731ff1d1e250b4f.mp3str"
+
+[deps]
+
+source_file="res://musics and sfx/crossyroad.mp3"
+dest_files=[ "res://.import/crossyroad.mp3-ede5ef2aab31115ce731ff1d1e250b4f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
