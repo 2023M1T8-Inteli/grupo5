@@ -12,7 +12,7 @@ export (float, 2.0) var duration = 1.0
 func _ready():
 	transition.material.set_shader_param("type", transition_type)
 	animation.playback_speed = duration
-	$AudioStreamPlayer2D.play(true)
+	
 	Points.currentSaveCode()
 
 # Botão de start para começar o jogo

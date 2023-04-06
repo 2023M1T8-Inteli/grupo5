@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/perguntas.ogg-756b1d4e12f60662cc8fa431f4fac063.oggstr"
+
+[deps]
+
+source_file="res://musics and sfx/perguntas.ogg"
+dest_files=[ "res://.import/perguntas.ogg-756b1d4e12f60662cc8fa431f4fac063.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

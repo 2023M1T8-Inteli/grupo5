@@ -1,20 +1,25 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
+[ext_resource path="res://scenes/fase 3/minigame/obs4.gd" type="Script" id=1]
 [ext_resource path="res://scenes/scripts/obs.gd" type="Script" id=2]
 [ext_resource path="res://scenes/scripts/obs3.gd" type="Script" id=3]
 [ext_resource path="res://scenes/scripts/obs2.gd" type="Script" id=4]
-[ext_resource path="res://sprites/inimigos whg.png" type="Texture" id=5]
+[ext_resource path="res://sprites/enemy-WHG.png" type="Texture" id=5]
 
 [sub_resource type="CircleShape2D" id=6]
 radius = 8.0
 
 [node name="Obstaculo" type="Node2D"]
+position = Vector2( 22, 58 )
 
 [node name="obs" type="KinematicBody2D" parent="."]
-position = Vector2( 262, 248 )
+position = Vector2( 26, 242 )
 collision_layer = 2
 collision_mask = 2
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obs"]
 position = Vector2( 1, -1 )
@@ -22,14 +27,17 @@ shape = SubResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="obs"]
 position = Vector2( 0.625003, -0.625003 )
-scale = Vector2( 0.0592448, 0.0592448 )
+scale = Vector2( 0.0959896, 0.0959896 )
 texture = ExtResource( 5 )
 
 [node name="obs2" type="KinematicBody2D" parent="."]
-position = Vector2( 114, 334 )
+position = Vector2( 161, 250 )
 collision_layer = 2
 collision_mask = 2
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obs2"]
 position = Vector2( 1, -1 )
@@ -37,14 +45,35 @@ shape = SubResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="obs2"]
 position = Vector2( 0.625003, -0.625003 )
-scale = Vector2( 0.0592448, 0.0592448 )
+scale = Vector2( 0.0942203, 0.0942203 )
+texture = ExtResource( 5 )
+
+[node name="obs4" type="KinematicBody2D" parent="."]
+position = Vector2( 54, 222 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obs4"]
+position = Vector2( 1, -1 )
+shape = SubResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="obs4"]
+position = Vector2( 0.625003, -0.625003 )
+scale = Vector2( 0.0957312, 0.0957312 )
 texture = ExtResource( 5 )
 
 [node name="obs3" type="KinematicBody2D" parent="."]
-position = Vector2( 94, 135 )
+position = Vector2( 293, 253 )
 collision_layer = 2
 collision_mask = 2
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obs3"]
 position = Vector2( 1, -1 )
@@ -52,5 +81,5 @@ shape = SubResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="obs3"]
 position = Vector2( 0.625003, -0.625003 )
-scale = Vector2( 0.0592448, 0.0592448 )
+scale = Vector2( 0.0944741, 0.0944741 )
 texture = ExtResource( 5 )

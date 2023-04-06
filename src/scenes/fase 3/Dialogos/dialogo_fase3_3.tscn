@@ -108,6 +108,7 @@ anims/alex_falando = SubResource( 6 )
 position = Vector2( -144, 321 )
 scale = Vector2( 0.195182, 0.236553 )
 texture = ExtResource( 10 )
+hframes = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect/PersonagemVtal"]
 anims/trutinha_vtal_falando = SubResource( 1 )

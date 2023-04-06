@@ -1,37 +1,50 @@
 extends KinematicBody2D
 
 func _ready():
-	pass # Replace with function body.
+#	print(SwipeControl.down)
+	pass
 
 
 var andar = Vector2() #movimento
 var velocidade = 65 #velocidade
 # Variáveis utilizadas para controlar o player no celular
-var cima = false
-var baixo = false
+
 var coletaveis = [0]
 var bateu
 
 var vida = 3
-
+onready var Swipe = get_parent().get_node("controls/SwipeScreenButton")
 # Funções utilizadas para controlar o player no celular
-var esquerda = false
-var direita = false 
-func _on_Cima_pressed():
-	cima = true
-func _on_Baixo_pressed():
-	baixo = true
-func _on_Direita_pressed():
-	direita = true
-func _on_Esquerda_pressed():
-	esquerda = true
-
-func _process(delta):
-	# Verifica se foi coletado todos os número bons
+var left = false
+var right = false
+var up = false
+var down = false
+#no começo todas são setadas como false para o jogador não se mover
+func _input(event):
+	if event is InputEventScreenDrag:
+		if Swipe.get_swipe_direction(event.relative,4) == Vector2.DOWN:
+			down = true
+		if Swipe.get_swipe_direction(event.relative,4) == Vector2.UP:
+			up = true
+		if Swipe.get_swipe_direction(event.relative,4) == Vector2.RIGHT:
+			right = true
+		if Swipe.get_swipe_direction(event.relative,4) == Vector2.LEFT:
+			left = true
+			
+func Item():
+	coletaveis[0] += 1
+	get_node("../Collect").play()
 	if coletaveis[0] == 4:
-		get_node("../texto final").visible = true
+		get_node("../Win").play()
+	
+#essa função verifica se o jogador está tocando a tela e se ele está arrastando o dedo para cima, baixo, direita ou esquerda e faz eles se mover para a direção que o jogador arrastou o dedo
+func _process(delta):
+	# Verifica se foi coletado todos os número bons	
+	if coletaveis[0] == 4:
+		get_node("../Popup").visible = true
+		get_node("../AudioStreamPlayer").stop()
+		Item()
 		yield(get_tree().create_timer(1.5), 'timeout')
-		
 		# Variável global que verifica se a fase está completa e adciona um ponto ao jogador
 		if Points.pacMan == false:
 			Points.addpoint()
@@ -53,26 +66,26 @@ func _process(delta):
 func _physics_process(delta):
 	move_and_slide(andar)
 	# Controle do Personagem
-	if Input.is_action_just_pressed("ui_down") or baixo:
+	if Input.is_action_just_pressed("ui_down") or down:
 		andar.y = velocidade
 		andar.x = 0
-		baixo = false
+		down = false
 		
-	if Input.is_action_just_pressed("ui_up") or cima:
+	if Input.is_action_just_pressed("ui_up") or up:
 		andar.y = -velocidade
 		andar.x = 0
-		cima = false
+		up = false
 
-	if Input.is_action_just_pressed("ui_right") or direita:
+	if Input.is_action_just_pressed("ui_right") or right:
 		andar.x = velocidade
 		andar.y = 0
-		direita = false
+		right = false
 		$AnimatedSprite.set_flip_h(false)
 
-	if Input.is_action_just_pressed("ui_left") or esquerda:
+	if Input.is_action_just_pressed("ui_left") or left:
 		andar.x = -velocidade
 		andar.y = 0
-		esquerda = false
+		left = false
 		$AnimatedSprite.set_flip_h(true)
 
 	
@@ -90,8 +103,10 @@ func _physics_process(delta):
 				print("morreu")
 				# Quando o player colide com o inimigo a posição é deifinida para a inicial e perde uma vida
 				get_node("../Person").position = Vector2(181, 338)
+				get_node("../Error").play()
 				andar.x = 0
 				andar.y = 0
+				
 				vida -= 1
 
 
@@ -99,23 +114,26 @@ func _physics_process(delta):
 func _on_Capacete2_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body.name == "Person":
 		get_node("../good/Capacete2").position = Vector2(402, 107)
-		coletaveis[0] += 1
+		Item()
 		print(coletaveis)
 
 func _on_Capacete_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body.name == "Person":
-		coletaveis[0] += 1
+		Item()
 		get_node("../good/Capacete").position = Vector2(402, 107)
 		print(coletaveis)
 
 func _on_Capacete3_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body.name == "Person":
-		coletaveis[0] += 1
+		Item()
 		get_node("../good/Capacete3").position = Vector2(402, 107)
 		print(coletaveis)
 
 func _on_Capacete4_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body.name == "Person":
-		coletaveis[0] += 1
+		Item()
 		get_node("../good/Capacete4").position = Vector2(402, 107)
 		print(coletaveis)
+
+
+

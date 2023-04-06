@@ -6,9 +6,8 @@
 [ext_resource path="res://sprites/personagem.png" type="Texture" id=4]
 [ext_resource path="res://sprites/cenario das falas.png" type="Texture" id=5]
 [ext_resource path="res://sprites/invisivel.png" type="Texture" id=6]
-[ext_resource path="res://sprites/trutinha_vtal_1.png" type="Texture" id=7]
-[ext_resource path="res://sprites/trutinha_vtal_2.png" type="Texture" id=8]
-[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://sprites/spritesheet.png" type="Texture" id=7]
+[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://Fonte/upheaval/upheavtt.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://sprites/gray_empty_button.png" type="Texture" id=11]
 
@@ -29,22 +28,27 @@ tracks/0/keys = {
 "values": [ ExtResource( 4 ), ExtResource( 3 ) ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "trutinha_vtal_falando"
-length = 0.5
+[sub_resource type="Animation" id=6]
+resource_name = "boneca_falando"
+length = 0.4
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:texture")
+tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ ExtResource( 7 ), ExtResource( 8 ) ]
+"update": 1,
+"values": [ 0, 2 ]
 }
+
+[sub_resource type="Animation" id=2]
+resource_name = "trutinha_vtal_falando"
+length = 0.5
+loop = true
 
 [sub_resource type="DynamicFont" id=5]
 size = 60
@@ -56,9 +60,9 @@ font_data = ExtResource( 10 )
 size = 18
 font_data = ExtResource( 10 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=7]
 size = 19
-font_data = ExtResource( 9 )
+font_data = ExtResource( 8 )
 
 [node name="Control" type="Control"]
 margin_right = 40.0
@@ -102,11 +106,13 @@ texture = ExtResource( 4 )
 anims/alex_falando = SubResource( 1 )
 
 [node name="PersonagemVtal" type="Sprite" parent="ColorRect"]
-position = Vector2( -148.056, 321.527 )
-scale = Vector2( 0.20925, 0.234175 )
+position = Vector2( -148, 424 )
+scale = Vector2( 0.602458, 0.380763 )
 texture = ExtResource( 7 )
+hframes = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect/PersonagemVtal"]
+anims/boneca_falando = SubResource( 6 )
 anims/trutinha_vtal_falando = SubResource( 2 )
 
 [node name="balaodefalaAlex" type="Sprite" parent="ColorRect"]
@@ -150,13 +156,13 @@ margin_bottom = -56.0
 custom_fonts/normal_font = SubResource( 4 )
 
 [node name="Text" type="RichTextLabel" parent="ColorRect"]
-modulate = Color( 0, 0, 0, 1 )
-self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -179.0
-margin_top = -66.0
-margin_right = 86.0
-margin_bottom = 119.0
-custom_fonts/normal_font = SubResource( 3 )
+margin_left = -182.0
+margin_top = -59.0
+margin_right = 99.0
+margin_bottom = 125.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 7 )
+bbcode_enabled = true
 
 [node name="Timer" type="Timer" parent="ColorRect"]
 

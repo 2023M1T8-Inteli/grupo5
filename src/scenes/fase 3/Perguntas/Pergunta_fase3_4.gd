@@ -14,9 +14,10 @@ func _on_TextureButton_button_up():
 	$TextureButton.texture_normal = errou
 	$TextureButton.texture_pressed = errou
 	$TextureButton.texture_hover = errou
-	
+	$sounds/Wrong.play()
 	# Timer e popup com o feedback da resposta
 	yield(get_tree().create_timer(0.5), 'timeout')
+	$FeedbackErro4/Popup.show()
 
 # Função do botão com a resposta certa
 func _on_TextureButton3_button_up():
@@ -31,7 +32,7 @@ func _on_TextureButton3_button_up():
 		Points.addpoint()
 		Points.addpoint()
 		Points.pergunta34 = true
-	
+	$sounds/Correct.play()
 	# Timer e popup com o feedback da resposta
 	yield(get_tree().create_timer(0.5), 'timeout')
 	$FeedbackAcerto4/Popup.show()
@@ -42,6 +43,7 @@ func _on_TextureButton2_button_up():
 	$TextureButton2.texture_normal = errou
 	$TextureButton2.texture_pressed = errou
 	$TextureButton2.texture_hover = errou
-	
+	$sounds/Wrong.play()
 	# Timer e popup com o feedback da resposta
 	yield(get_tree().create_timer(0.5), 'timeout')
+	$FeedbackErro4/Popup.show()

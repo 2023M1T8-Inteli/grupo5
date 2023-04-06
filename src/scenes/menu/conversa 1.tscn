@@ -3,7 +3,6 @@
 [ext_resource path="res://scenes/scripts/conversa 1.gd" type="Script" id=1]
 [ext_resource path="res://sprites/roberto.png" type="Texture" id=3]
 
-
 [node name="conversa 1" type="Node2D"]
 script = ExtResource( 1 )
 

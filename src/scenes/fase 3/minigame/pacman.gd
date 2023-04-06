@@ -34,3 +34,4 @@ func _on_Button3_pressed():
 	# Define a variável de pause da fase como falsa
 	get_tree().paused = false
 	get_tree().change_scene("res://scenes/menu/main_interface.tscn")
+

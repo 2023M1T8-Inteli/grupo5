@@ -12,7 +12,6 @@
 
 ## Descrição
 
-### Link do projeto no GitHub: https://github.com/Rodrigo-07/Jogo-do-Grupo-5
 ### Link para jogar o jogo: https://2023m1t8-inteli.github.io/grupo5/
 
 📜 Descrição curta sobre o que seu projeto faz.
@@ -78,7 +77,7 @@ Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro progra
 <b>HTML:</b>
 
 Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
+Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser) ou teste o jogo através desse link: https://2023m1t8-inteli.github.io/grupo5/
 
 ## 💻 Configuração para Desenvolvimento
 

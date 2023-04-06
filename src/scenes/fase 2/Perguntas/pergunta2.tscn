@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/fase 2/Perguntas/pergunta2.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Buttonmuitoescuro.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://scenes/fase 2/Perguntas/FeedbackAcerto2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/fase 2/Perguntas/FeedbackErro2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://musics and sfx/quests.tscn" type="PackedScene" id=10]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tela perguntas.png 0"
@@ -172,6 +173,8 @@ autowrap = true
 [node name="FeedbackAcerto2" parent="." instance=ExtResource( 8 )]
 
 [node name="FeedbackErro2" parent="." instance=ExtResource( 9 )]
+
+[node name="sounds" parent="." instance=ExtResource( 10 )]
 
 [connection signal="button_up" from="TextureButton" to="." method="_on_TextureButton_button_up"]
 [connection signal="button_up" from="TextureButton2" to="." method="_on_TextureButton2_button_up"]

@@ -1,5 +1,8 @@
 extends Node
 
+#usada apenas para a colisão da fase do whg
+var collision = 0
+
 #apenas para o addCode
 var next
 var permission = 0
@@ -35,12 +38,15 @@ var pacMan = false
 
 var points = 00
 
-# Função que adiciona um ponto para o jogador
-# Ela pode ser chamada em qualquer cena para adiciona pontos
+func _process(delta):
+		yield(get_tree().create_timer(2), 'timeout')
+		currentSaveCode()
+
+#Função a ser chamada quando é necessario adcionar 1 ponto
 func addpoint():
 	points += 1
-
-
+	var file = File.new()
+#Verifica e adiciona um novo save code ao jogo
 func addSaveCode():
 	
 	stateLevel1 = 0
@@ -51,6 +57,7 @@ func addSaveCode():
 	var pointForCheck
 	var checkingPoints = 0
 
+#Apenas para checar se o código inserido pelo user é real
 		#Parte do codigo para fase 1
 	if currentCodeArray[0] == 1:
 		checkingPoints += 2
@@ -94,6 +101,7 @@ func addSaveCode():
 	elif currentCodeArray.size() == 5:
 		pointForCheck = int(str(currentCodeArray[3])+str(currentCodeArray[4]))
 		
+	#Se o código inserido for real, o jogo entra no estado do código inserido
 	if checkingPoints == pointForCheck:
 		#define estado dos niveis
 		stateLevel1 = currentCodeArray[0]
@@ -112,12 +120,22 @@ func addSaveCode():
 		if stateLevel1 == 1:
 			pergunta11 =  true
 		if stateLevel1 == 2:
+			pergunta11 =  true
 			whg =  true
 		if stateLevel1 == 3:
+			pergunta11 =  true
+			whg =  true
 			pergunta12 =  true
 		if stateLevel1 == 4:
+			pergunta11 =  true
+			whg =  true
+			pergunta12 =  true
 			pergunta13 =  true
 		if stateLevel1 == 5:
+			pergunta11 =  true
+			whg =  true
+			pergunta12 =  true
+			pergunta13 =  true
 			pergunta14 = true
 		
 		if stateLevel2 == 0:
@@ -125,14 +143,29 @@ func addSaveCode():
 		if stateLevel2 == 1:
 			pergunta21 = true
 		if stateLevel2 == 2:
+			pergunta21 = true
 			pergunta22 = true
 		if stateLevel2 == 3:
+			pergunta21 = true
+			pergunta22 = true
 			pergunta23 = true
 		if stateLevel2 == 4:
+			pergunta21 = true
+			pergunta22 = true
+			pergunta23 = true
 			crossingroad = true
 		if stateLevel2 == 5:
+			pergunta21 = true
+			pergunta22 = true
+			pergunta23 = true
+			crossingroad = true
 			pergunta24 = true
 		if stateLevel2 == 6:
+			pergunta21 = true
+			pergunta22 = true
+			pergunta23 = true
+			crossingroad = true
+			pergunta24 = true
 			fios = true
 			
 		if stateLevel3 == 0:
@@ -140,18 +173,29 @@ func addSaveCode():
 		if stateLevel3 == 1:
 			pergunta31 =  true
 		if stateLevel3 == 2:
+			pergunta31 =  true
 			pergunta32 =  true
 		if stateLevel3 == 3:
+			pergunta31 =  true
+			pergunta32 =  true
 			pergunta33 =  true
 		if stateLevel3 == 4:
+			pergunta31 =  true
+			pergunta32 =  true
+			pergunta33 =  true
 			pergunta34 =  true
 		if stateLevel3 == 5:
+			pergunta31 =  true
+			pergunta32 =  true
+			pergunta33 =  true
+			pergunta34 =  true
 			pacMan = true
 		
 		# se next é igual a true, o código é valido
 		next = true
-		#Código invalido
+		
 	else:
+		#Código invalido
 		next = false
 	
 
