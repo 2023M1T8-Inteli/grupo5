@@ -69,14 +69,13 @@ func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/menu/Menu.tscn")
 
 
-func _on_LineEdit_focus_entered():
-	if OS.has_virtual_keyboard():
-		Input.set_os_keyboard_visible(true)
-
-
 func _on_Button2_button_down():
 	$Button2/Popup.show()
 
 
 func _on_Button2_button_up():
 	$Button2/Popup.hide()
+	
+func _on_LineEdit_focus_entered():
+	if OS.has_virtual_keyboard:
+		OS.show_virtual_keyboard()
