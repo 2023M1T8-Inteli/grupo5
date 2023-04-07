@@ -241,6 +241,8 @@ Para abrir este projeto você necessita das seguintes ferramentas:
     * Comentários no código da fase dos fios
     * Bug de não aparecer o diálogo final resolvido
     * Tutoriais da fases atualizados e implementados no jogo
+  * 5.0: 06/04/2023
+    * Versão final do MVP! Obrigado V.tal por ter confiado em nossa equipe e obrigado a todos nos acompanharam no desenvolvimento do jogo!
 
 ## 📋 Licença/License
 
