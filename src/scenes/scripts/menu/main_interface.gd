@@ -9,7 +9,22 @@ var twoCompleted = load("res://sprites/corruption-button-Sheet_completed.png")
 
 var threeCompleted = load("res://sprites/ambienteseguro-button-Sheet_completo.png")
 
+onready var sizebar = $ProgressBar/ColorRect/ColorRect.rect_size.x
+
 func _ready():
+	
+	#Barra de progressão
+	if Points.stateLevel1 == 0 and Points.stateLevel2 == 0 and Points.stateLevel3 == 0:
+		$ProgressBar/ColorRect/ColorRect.rect_size.x = 0
+		
+	if Points.stateLevel1 == 5 or Points.stateLevel2 == 6 or Points.stateLevel3 == 5:
+		$ProgressBar/ColorRect/ColorRect.rect_size.x = sizebar/3
+		
+	if (Points.stateLevel1 == 5 and Points.stateLevel2 == 6) or (Points.stateLevel1 == 5 and Points.stateLevel3 == 5) or (Points.stateLevel2 == 6 and Points.stateLevel3 ==5):
+		$ProgressBar/ColorRect/ColorRect.rect_size.x = (sizebar/3)*2
+	
+	if Points.stateLevel1 == 5 and Points.stateLevel2 == 6 and Points.stateLevel3 == 5:
+		$ProgressBar/ColorRect/ColorRect.rect_size.x = sizebar
 	
 	Points.currentSaveCode()
 	

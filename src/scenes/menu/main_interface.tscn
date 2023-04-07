@@ -105,7 +105,6 @@ icon = ExtResource( 5 )
 flat = true
 
 [node name="finish" parent="." instance=ExtResource( 1 )]
-visible = false
 
 [node name="Container" type="Container" parent="."]
 margin_right = 361.0
@@ -159,6 +158,25 @@ flat = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
 autoplay = true
+
+[node name="ProgressBar" type="Container" parent="."]
+margin_left = 9.0
+margin_top = 4.0
+margin_right = 212.0
+margin_bottom = 44.0
+
+[node name="ColorRect" type="ColorRect" parent="ProgressBar"]
+margin_top = 5.0
+margin_right = 203.0
+margin_bottom = 35.0
+color = Color( 0.25098, 0.25098, 0.25098, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="ProgressBar/ColorRect"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 198.0
+margin_bottom = 25.0
+color = Color( 0, 1, 0.133333, 1 )
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
