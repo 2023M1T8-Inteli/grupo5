@@ -6,7 +6,7 @@
 
 # Nome do Projeto: V.Ethics
 
-## Nome do Grupo
+## Nome do Grupo: V5
 
 ## Integrantes: <a href="">Clara Mohammad</a>, <a href="https://www.linkedin.com/in/danielzular/">Daniel Zular</a>, <a href="https://www.linkedin.com/in/erik-batista-da-silva-455612215/">Erik Batista</a>, <a href="https://www.linkedin.com/in/gabriellysilvavitor/">Gabrielly Silva Vitor</a>, <a href="https://www.linkedin.com/in/otto-bernardo-coutinho-lima/">Otto Bernardo</a>, <a href="https://www.linkedin.com/in/pedro-henrique-cruz-178a62227/">Pedro Cruz</a>, <a href="https://www.linkedin.com/in/rodrigo-sales-07/">Rodrigo Sales</a>, <a href="https://www.linkedin.com/in/samuel-martins-lopes-nascimento-7a805526a/">Samuel Martins</a>
 
@@ -17,9 +17,6 @@
 
 <br><br>
 <br><br>
-<p align="center">
-<img src="imagens\Tela incial do jogo.png" alt="NOME DO JOGO" border="0">
-</p>
 <p align="center">
 Game by V.Ethics</a>
 </p>
