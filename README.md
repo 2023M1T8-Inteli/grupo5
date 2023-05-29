@@ -14,14 +14,8 @@
 
 ### Link para jogar o jogo: https://2023m1t8-inteli.github.io/grupo5/
 
-
 <br><br>
 <br><br>
-<p align="center">
-Game by V.Ethics</a>
-</p>
-
-
 
 <br>
 O jogo foi desenvolvido a pedido da empresa de telecomunicações V.tal, com o intuito de gamificar o código de ética, buscando especialmente aumentar o percentual de completude dos treinamento, aderência ao nosso código de ética e políticas obrigatórias. Buscamos criar um jogo que pudesse ser jogado facilmente em qualquer lugar e transmitisse o conteúdo do código de ética de maneira mais didática e interativa. Nosso jogo é baseado em 3 pilares : diálogos, perguntas e minigames sendo que cada um desses elementos faz parte na construção da narrativa e na transmissão do conteúdo sobre o código de ética. 
